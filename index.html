@@ -24,9 +24,9 @@
       --bg-card: #FFFFFF;           /* カード類はクリーンな白 */
       --bg-sub: #F0ECE3;            /* セクションの区切り用ニュアンスベージュ */
       
-      --text-main: #FFFFFF;         /* やわらかなダークブラウン文字 */
-      --text-muted: #FFFFFF;
-      --text-header: #FFFFFF;       /* ヘッダー上の濃いスレートカラー */
+      --text-main: #3C3835;         /* やわらかなダークブラウン文字 */
+      --text-muted: #736C65;
+      --text-header: #3A4D52;       /* ヘッダー上の濃いスレートカラー */
       
       --accent-main: #8DB3B9;       /* 同系色アクセント */
       --accent-hover: #729CA3;      /* ホバー時のカラー */
@@ -769,7 +769,16 @@
     min-height: 60vh;
   }
 }
-    
+ /* ヒーローセクション（背景画像の上）の文字だけを白にする設定 */
+.hero h1 {
+  color: #FFFFFF !important; /* 見出しを白にする */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* 暗い影をつけて文字を読みやすくする */
+}
+
+.hero-sub {
+  color: #FFFFFF !important; /* サブテキスト・説明文を白にする */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); /* 影をつけて浮き上がらせる */
+}   
     
     }
   </style>
