@@ -3,65 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サロン特化型Web制作＆サポート | レンタルサロンオーナーが作るWebサイト</title>
+  <title>white rabbit WEB STUDIO</title>
   
-  <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    /* ==========================================================================
-       1. VARIABLES & BASE STYLES (#bad6d9 Soft Pale Palette)
-       ========================================================================== */
     :root {
-      /* Theme Colors */
-      --header-bg: #bad6d9;         /* ペールブルーヘッダー */
-      --bg-main: #F9F6F0;           /* 温かみのあるミルクティーベージュ */
-      --bg-card: #FFFFFF;           /* カード類はクリーンな白 */
-      --bg-sub: #F0ECE3;            /* セクションの区切り用ニュアンスベージュ */
-      
-      --text-main: #3C3835;         /* やわらかなダークブラウン文字 */
-      --text-muted: #736C65;
-      --text-header: #3A4D52;       /* ヘッダー上の濃いスレートカラー */
-      
-      --accent-main: #8DB3B9;       /* 同系色アクセント */
-      --accent-hover: #729CA3;      /* ホバー時のカラー */
-      --accent-light: #EBF3F4;      /* 薄いアクセント背景 */
-      
-      --line-green: #06C755;
-      --line-green-hover: #05B34C;
-
-      --border-color: #E6E0D6;
-      
-      /* Typography */
-      --font-base: 'Noto Sans JP', sans-serif;
-      --font-en: 'Plus Jakarta Sans', sans-serif;
-      
-      /* Utilities */
-      --shadow-sm: 0 4px 12px rgba(60, 56, 53, 0.04);
-      --shadow-md: 0 8px 24px rgba(60, 56, 53, 0.07);
-      --shadow-lg: 0 16px 32px rgba(60, 56, 53, 0.1);
-      --radius-sm: 8px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-
-    /* Dark Mode Theme */
-    [data-theme="dark"] {
-      --header-bg: #2C383A;
-      --bg-main: #1C1A18;
-      --bg-card: #282522;
-      --bg-sub: #221F1C;
-      --text-main: #EDE8E2;
-      --text-muted: #A8A096;
-      --text-header: #BAD6D9;
-      --border-color: #38332E;
-      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
-      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
-      --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.4);
+      --header-bg: #B9D8DE;        /* ペールブルー */
+      --header-dark: #586064;      /* チャコールグレー */
+      --bg-main: #F9F6F0;        /* ミルクティーベージュ */
+      --text-main: #FFFFFF;        /* スマホ・PC共通で文字色を白に統一 */
+      --text-dark: #332F2C;
+      --accent-green: #06C755;
     }
 
     * {
@@ -70,1004 +26,129 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
+      font-family: 'Noto Sans JP', sans-serif;
       background-color: var(--bg-main);
-      color: var(--text-main);
-      font-family: var(--font-base);
-      line-height: 1.85;
-      letter-spacing: 0.03em;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      overflow-x: hidden;
+      color: var(--text-dark);
     }
 
-    /* スマホでの美しい改行・文字切り対策 */
-    h1, h2, h3, h4, p, .hero-sub {
-      word-break: keep-all;
-      overflow-wrap: anywhere;
-      line-height: 1.5;
-    }
-
-    h1, h2, h3, h4 {
-      font-weight: 700;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* ==========================================================================
-       2. LAYOUT & COMPONENTS
-       ========================================================================== */
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .section {
-      padding: 100px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-title .en {
-      display: block;
-      font-family: var(--font-en);
-      color: var(--accent-main);
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .section-title h2 {
-      font-size: 2rem;
-      color: var(--text-main);
-      position: relative;
-      display: inline-block;
-    }
-
-    .section-title h2::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: var(--accent-main);
-      margin: 16px auto 0;
-      border-radius: 3px;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 18px 36px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.05rem;
-      transition: var(--transition);
-      cursor: pointer;
-      border: none;
-      box-shadow: var(--shadow-md);
-    }
-
-    .btn-line {
-      background-color: var(--line-green);
-      color: #FFFFFF;
-    }
-
-    .btn-line:hover {
-      background-color: var(--line-green-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(6, 199, 85, 0.25);
-    }
-
-    .btn-primary {
-      background-color: var(--accent-main);
-      color: #FFFFFF;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--accent-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(141, 179, 185, 0.35);
-    }
-
-    /* Header & Nav (#bad6d9 Base) */
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: var(--header-bg);
-      box-shadow: 0 2px 12px rgba(58, 77, 82, 0.08);
-      transition: var(--transition);
-    }
-
-    .header-inner {
+    /* --- ヘッダー領域 --- */
+    .site-header {
+      background-color: var(--header-bg);
+      padding: 15px 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 80px;
     }
 
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-header);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    /* 新しいロゴ画像 */
+    .site-logo {
+      height: 45px;
+      width: auto;
+      object-fit: contain;
     }
 
-    .logo i {
-      color: var(--text-header);
-    }
-
-    .nav-list {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav-link {
+    /* 右上：枠・背景・アイコンを消してシンプルな白文字に設定 */
+    .header-badge-text {
+      color: #FFFFFF;
       font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text-header);
-      transition: var(--transition);
-      opacity: 0.9;
-    }
-
-    .nav-link:hover {
-      opacity: 1;
       font-weight: 700;
+      letter-spacing: 0.05em;
     }
 
-    .header-controls {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    /* Dark Mode Toggle */
-    .theme-toggle {
-      background: rgba(255, 255, 255, 0.4);
-      border: 1px solid rgba(58, 77, 82, 0.15);
-      color: var(--text-header);
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
+    /* --- メインビジュアル領域 --- */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+      background: url('DSC04399.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      transition: var(--transition);
+      text-align: center;
+      padding: 40px 20px;
     }
 
-    .theme-toggle:hover {
-      transform: rotate(15deg);
-      background: rgba(255, 255, 255, 0.6);
-    }
-
-    /* ==========================================================================
-       3. HERO SECTION (Background Image Style)
-       ========================================================================== */
-    .hero {
-      padding-top: 180px;
-      padding-bottom: 120px;
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      background-image: url('DSC04399.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    /* 写真の上に少し暗めのフィルターを重ねて白文字を見やすくする */
-    .hero::before {
-      content: '';
+    /* 写真上の暗めオーバーレイ（文字を白でくっきり見せるため） */
+    .hero-section::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-content {
+      position: relative;
       z-index: 1;
-    }
-
-    .hero-container {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-    }
-
-    /* ヒーローセクションのテキストエリア */
-    .hero-content-box {
-      max-width: 680px;
-      background: transparent !important;
-      backdrop-filter: none;
-      padding: 0;
-      border-radius: 0;
-      box-shadow: none;
-      border: none;
-    }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.9) !important;
-      border: 1px solid var(--accent-main);
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #3C3835 !important;
-      margin-bottom: 20px;
-    }
-
-    /* ヒーロー内の文字（PC・スマホ・ダークモード共通で強制的に白） */
-    .hero h1,
-    [data-theme="dark"] .hero h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #FFFFFF !important;
-      line-height: 1.4;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
-    }
-
-    .hero-sub,
-    [data-theme="dark"] .hero-sub {
-      font-size: 1.05rem;
-      color: #FFFFFF !important;
-      margin-bottom: 32px;
-      line-height: 1.8;
-      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6) !important;
-      opacity: 0.95;
-    }
-
-    /* ==========================================================================
-       4. CONCERNS SECTION
-       ========================================================================== */
-    .concerns {
-      background-color: var(--bg-sub);
-    }
-
-    .concerns-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .concern-card {
-      background: var(--bg-card);
-      padding: 32px 24px;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
-      text-align: center;
-      transition: var(--transition);
-    }
-
-    .concern-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .concern-icon {
-      width: 60px;
-      height: 60px;
-      background: var(--accent-light);
-      color: var(--accent-main);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin: 0 auto 20px;
-    }
-
-    .concern-card p {
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    /* ==========================================================================
-       5. FEATURES SECTION
-       ========================================================================== */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-    }
-
-    .feature-card {
-      background: var(--bg-card);
-      padding: 40px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      gap: 24px;
-      transition: var(--transition);
-    }
-
-    .feature-card:hover {
-      box-shadow: var(--shadow-md);
-      border-color: var(--accent-main);
-    }
-
-    .feature-num {
-      font-family: var(--font-en);
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--accent-main);
-      line-height: 1;
-    }
-
-    .feature-content h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: var(--text-main);
-    }
-
-    .feature-content p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    /* ==========================================================================
-       6. WORKS SECTION
-       ========================================================================== */
-    .works {
-      background-color: var(--bg-sub);
-    }
-
-    .tab-nav {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .tab-btn {
-      padding: 12px 28px;
-      border-radius: 30px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      font-weight: 500;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .tab-btn.active, .tab-btn:hover {
-      background: var(--accent-main);
-      color: #FFFFFF;
-      border-color: var(--accent-main);
-    }
-
-    .works-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
-    }
-
-    .work-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
-      transition: var(--transition);
-    }
-
-    .work-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .work-img {
-      height: 220px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-
-    .work-badge {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      background: rgba(255, 255, 255, 0.92);
-      color: var(--accent-main);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-    }
-
-    .work-body {
-      padding: 24px;
-    }
-
-    .work-body h3 {
-      font-size: 1.15rem;
-      margin-bottom: 8px;
-    }
-
-    .work-body p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       7. PRICING SECTION
-       ========================================================================== */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .price-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 48px 36px;
-      border: 2px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition);
-    }
-
-    .price-card.featured {
-      border-color: var(--accent-main);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .featured-badge {
-      position: absolute;
-      top: -16px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--accent-main);
-      color: #FFFFFF;
-      padding: 6px 20px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-
-    .price-header {
-      text-align: center;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border-color);
-      margin-bottom: 24px;
-    }
-
-    .price-title {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-    }
-
-    .price-amount {
-      font-family: var(--font-en);
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--accent-main);
-    }
-
-    .price-amount span {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: var(--text-muted);
-    }
-
-    .price-sub {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    .price-features {
-      margin-bottom: 32px;
-      flex-grow: 1;
-    }
-
-    .price-features li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.92rem;
-      margin-bottom: 16px;
-    }
-
-    .price-features i {
-      color: var(--accent-main);
-      font-size: 1rem;
-    }
-
-    /* ==========================================================================
-       8. PROCESS SECTION
-       ========================================================================== */
-    .process {
-      background-color: var(--bg-sub);
-    }
-
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .step-card {
-      background: var(--bg-card);
-      padding: 32px 20px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-color);
-      text-align: center;
-      position: relative;
-    }
-
-    .step-num {
-      font-family: var(--font-en);
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--accent-main);
-      background: var(--accent-light);
-      padding: 4px 12px;
-      border-radius: 12px;
-      display: inline-block;
-      margin-bottom: 16px;
-    }
-
-    .step-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 12px;
-    }
-
-    .step-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       9. CTA & FOOTER
-       ========================================================================== */
-    .cta {
-      text-align: center;
-      background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-sub) 100%);
-      border-top: 1px solid var(--border-color);
-    }
-
-    .cta-box {
-      background: var(--bg-card);
-      padding: 60px 40px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-lg);
       max-width: 800px;
-      margin: 0 auto;
+      color: var(--text-main); /* PC・スマホ共通で文字色を完全に白に固定 */
     }
 
-    .cta h2 {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      color: #FFFFFF; /* 明示的に白指定 */
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
-    .cta p {
-      color: var(--text-muted);
-      margin-bottom: 36px;
+    .hero-sub {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #FFFFFF; /* 明示的に白指定 */
+      text-shadow: 0 1px 5px rgba(0,0,0,0.3);
     }
 
-    .footer {
-      background: var(--bg-sub);
-      border-top: 1px solid var(--border-color);
-      padding: 40px 0;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       10. RESPONSIVE DESIGN (MEDIA QUERIES)
-       ========================================================================== */
-    @media (max-width: 992px) {
-      .hero-content-box {
-        max-width: 100%;
-      }
-
-      .features-grid, .pricing-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .process-steps {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
+    /* モバイル調整 */
     @media (max-width: 768px) {
-      .section {
-        padding: 60px 0;
-      }
-
-      .nav-list {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 120px;
-        padding-bottom: 60px;
-        background-position: left center;
-        min-height: 60vh;
-      }
-
-      .hero-content-box {
-        padding: 0;
-      }
-
-      .hero h1 {
-        font-size: 1.6rem;
-      }
-
-      .process-steps {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-box {
-        padding: 40px 20px;
-      }
-
-      .feature-card {
-        padding: 28px 20px;
+      .site-header {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
+        text-align: center;
+      }
+      .site-logo {
+        height: 38px;
+      }
+      .header-badge-text {
+        font-size: 0.85rem;
+      }
+      .hero-title {
+        font-size: 1.4rem;
+      }
+      .hero-sub {
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER (#bad6d9 Base Banner) -->
-  <header class="header">
-    <div class="container header-inner">
-      <a href="#" class="logo">
-        <i class="fa-solid fa-spa"></i> Salon Web Design
-      </a>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#concerns" class="nav-link">お悩み</a></li>
-          <li><a href="#features" class="nav-link">選ばれる理由</a></li>
-          <li><a href="#works" class="nav-link">デザインサンプル</a></li>
-          <li><a href="#pricing" class="nav-link">料金プラン</a></li>
-          <li><a href="#process" class="nav-link">ご利用の流れ</a></li>
-        </ul>
-      </nav>
-      <div class="header-controls">
-        <button class="theme-toggle" id="themeToggle" aria-label="テーマ切り替え">
-          <i class="fa-solid fa-moon"></i>
-        </button>
-      </div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <!-- 新ロゴ画像（WEB STUDIOロゴ_2.png） -->
+    <img src="WEB STUDIOロゴ_2.png" alt="white rabbit WEB STUDIO" class="site-logo">
+    
+    <!-- 枠・背景・葉っぱを消した白文字表記 -->
+    <div class="header-badge-text">
+      \ 当レンタルサロン利用者様限定 /
     </div>
   </header>
 
-  <!-- HERO SECTION (Background Style) -->
-  <section class="hero">
-    <div class="container hero-container">
-      <div class="hero-content-box">
-        <div class="hero-tag">
-          <i class="fa-solid fa-leaf"></i> 当レンタルサロンご利用者様限定
-        </div>
-        <h1>あなたのサロンの魅力を<br>シンプルで美しいWebサイトに。</h1>
-        <p class="hero-sub">現場を知るサロンオーナーが寄り添う、個人セラピスト・施術者様のためのWeb制作＆運用サポートサービス。</p>
-        <a href="#cta" class="btn btn-line">
-          <i class="fa-brands fa-line"></i> LINEで無料相談してみる
-        </a>
-      </div>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        あなたのサロンの魅力を<br>シンプルで美しいWebサイトに
+      </h1>
+      <p class="hero-sub">
+        現場を知るサロンオーナーが作る、セラピスト・施術者様のためのWeb制作
+      </p>
     </div>
   </section>
 
-  <!-- CONCERNS SECTION -->
-  <section class="section concerns" id="concerns">
-    <div class="container">
-      <div class="section-title">
-        <span class="en">Trouble</span>
-        <h2>こんなお悩み、ありませんか？</h2>
-      </div>
-      <div class="concerns-grid">
-        <div class="concern-card">
-          <div class="concern-icon"><i class="fa-solid fa-yen-sign"></i></div>
-          <p>制作会社に頼むと数十万円かかってしまい、諦めていた</p>
-        </div>
-        <div class="concern-card">
-          <div class="concern-icon"><i class="fa-solid fa-hashtag"></i></div>
-          <p>SNSだけじゃなく、信頼できる自分のホームページが欲しい</p>
-        </div>
-        <div class="concern-card">
-          <div class="concern-icon"><i class="fa-solid fa-calendar-check"></i></div>
-          <p>予約システムや公式LINEへの導線を分かりやすく整えたい</p>
-        </div>
-        <div class="concern-card">
-          <div class="concern-icon"><i class="fa-solid fa-laptop"></i></div>
-          <p>パソコン操作が苦手で、作った後の更新や管理が不安…</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES SECTION -->
-  <section class="section features" id="features">
-    <div class="container">
-      <div class="section-title">
-        <span class="en">Why Choose Us</span>
-        <h2>当サービスが選ばれる4つの理由</h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-num">01</div>
-          <div class="feature-content">
-            <h3>サロン現場を知るオーナー目線</h3>
-            <p>施術やサロン運営の悩みがわかるからこそ、サロンの空気感やあなたのこだわりを最大限引き出すデザインをご提案します。</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">02</div>
-          <div class="feature-content">
-            <h3>スピーディ＆リーズナブルな制作体制</h3>
-            <p>制作プロセスを徹底的に効率化。個人サロンのスタートアップでも導入しやすい安心の価格設定とスピード感で、高品質なWebサイトをお届けします。</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">03</div>
-          <div class="feature-content">
-            <h3>スマホ最適化＆予約導線設計</h3>
-            <p>サロン検索の9割以上はスマホから。見やすいレイアウトと、公式LINEや予約システムへ迷わず導くボタン設計を重視します。</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">04</div>
-          <div class="feature-content">
-            <h3>ずっと安心のサブスク修正サポート</h3>
-            <p>「新メニューを追加したい」「営業時間を変更したい」そんな時もLINEで連絡するだけ。作った後もずっと安心です。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORKS SECTION -->
-  <section class="section works" id="works">
-    <div class="container">
-      <div class="section-title">
-        <span class="en">Sample Works</span>
-        <h2>デザインサンプル</h2>
-      </div>
-
-      <div class="tab-nav">
-        <button class="tab-btn active" data-filter="all">すべて</button>
-        <button class="tab-btn" data-filter="relax">アロマ・セラピー</button>
-        <button class="tab-btn" data-filter="body">整体・カイロ</button>
-        <button class="tab-btn" data-filter="beauty">ネイル・まつエク</button>
-      </div>
-
-      <div class="works-grid">
-        <!-- Sample 1 -->
-        <div class="work-card" data-category="relax">
-          <div class="work-img" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80');">
-            <span class="work-badge">アロマ・セラピスト</span>
-          </div>
-          <div class="work-body">
-            <h3>ナチュラル＆オーガニック</h3>
-            <p>透明感のあるペールブルーと自然の温もりで、心から癒やされる上質なサロン空間を表現。</p>
-          </div>
-        </div>
-
-        <!-- Sample 2 -->
-        <div class="work-card" data-category="body">
-          <div class="work-img" style="background-image: url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80');">
-            <span class="work-badge">整体・カイロプラクティック</span>
-          </div>
-          <div class="work-body">
-            <h3>清潔感＆スタイリッシュ</h3>
-            <p>清潔感のあるトーンを基調とし、信頼感と施術のこだわりがしっかり伝わる洗練されたデザイン。</p>
-          </div>
-        </div>
-
-        <!-- Sample 3 -->
-        <div class="work-card" data-category="beauty">
-          <div class="work-img" style="background-image: url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80');">
-            <span class="work-badge">ネイル・まつエク</span>
-          </div>
-          <div class="work-body">
-            <h3>ニュアンス＆フェミニン</h3>
-            <p>優しく澄んだカラーで洗練されたトレンド感を演出。施術写真やアートが美しく映えるレイアウト。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING SECTION -->
-  <section class="section pricing" id="pricing">
-    <div class="container">
-      <div class="section-title">
-        <span class="en">Price Plan</span>
-        <h2>わかりやすい料金プラン</h2>
-      </div>
-
-      <div class="pricing-grid">
-        <!-- Subsk Plan (Featured) -->
-        <div class="price-card featured">
-          <div class="featured-badge">一番人気</div>
-          <div class="price-header">
-            <h3 class="price-title">サブスク安心プラン</h3>
-            <div class="price-amount">¥3,980 <span>/月（税込）</span></div>
-            <p class="price-sub">初期費用：¥19,800（税込）</p>
-          </div>
-          <ul class="price-features">
-            <li><i class="fa-solid fa-check"></i> 1ページ構成のWebサイト制作</li>
-            <li><i class="fa-solid fa-check"></i> スマホ・タブレット完全対応</li>
-            <li><i class="fa-solid fa-check"></i> 公式LINE・予約システム連携</li>
-            <li><i class="fa-solid fa-check"></i> <strong>月2回までの修正・更新サポート対応</strong></li>
-            <li><i class="fa-solid fa-check"></i> 運用中の安心LINEサポート</li>
-          </ul>
-          <a href="#cta" class="btn btn-primary">このプランで相談する</a>
-        </div>
-
-        <!-- One-time Plan -->
-        <div class="price-card">
-          <div class="price-header">
-            <h3 class="price-title">シンプル買い切りプラン</h3>
-            <div class="price-amount">¥39,800 <span>（税込）</span></div>
-            <p class="price-sub">月額費用：なし（一括払い）</p>
-          </div>
-          <ul class="price-features">
-            <li><i class="fa-solid fa-check"></i> 1ページ構成のWebサイト制作</li>
-            <li><i class="fa-solid fa-check"></i> スマホ・タブレット完全対応</li>
-            <li><i class="fa-solid fa-check"></i> 公式LINE・予約システム連携</li>
-            <li><i class="fa-solid fa-check"></i> 納品後の月額費用は完全無料</li>
-            <li><i class="fa-solid fa-check"></i> 納品完了データをお渡し</li>
-          </ul>
-          <a href="#cta" class="btn btn-primary" style="background-color: var(--text-muted);">このプランで相談する</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS SECTION -->
-  <section class="section process" id="process">
-    <div class="container">
-      <div class="section-title">
-        <span class="en">Process</span>
-        <h2>ご利用の流れ</h2>
-      </div>
-
-      <div class="process-steps">
-        <div class="step-card">
-          <span class="step-num">STEP 01</span>
-          <h3>LINEで無料相談</h3>
-          <p>まずは公式LINEよりお気軽にご連絡ください。簡単なヒアリングシートにご記入いただきます。</p>
-        </div>
-        <div class="step-card">
-          <span class="step-num">STEP 02</span>
-          <h3>デザイン案のご提案</h3>
-          <p>ヒアリングをもとにスピーディにWebサイトのベースを作成・ご提案します。</p>
-        </div>
-        <div class="step-card">
-          <span class="step-num">STEP 03</span>
-          <h3>微調整・最終確認</h3>
-          <p>文章や写真、色味など気になる部分をLINEでやり取りしながら微調整していきます。</p>
-        </div>
-        <div class="step-card">
-          <span class="step-num">STEP 04</span>
-          <h3>公開＆運用スタート</h3>
-          <p>Webサイトを公開！サブスクプランならその後のメニュー変更などの更新もLINEでお任せいただけます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA SECTION -->
-  <section class="section cta" id="cta">
-    <div class="container">
-      <div class="cta-box">
-        <h2>まずはサロンのご利用ついでに<br>お気軽にご相談ください！</h2>
-        <p>「こんなサイト作れる？」「まだメニューが決まりきっていないんだけど…」といったご相談も大歓迎です。</p>
-        <a href="#" class="btn btn-line">
-          <i class="fa-brands fa-line"></i> LINEで無料相談してみる
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; Salon Web Design. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- JAVASCRIPT -->
-  <script>
-    // 1. Dark Mode Toggle Script
-    const themeToggleBtn = document.getElementById('themeToggle');
-    const themeIcon = themeToggleBtn.querySelector('i');
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-      if (savedTheme === 'dark') {
-        themeIcon.classList.replace('fa-moon', 'fa-sun');
-      }
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      let newTheme = 'light';
-
-      if (currentTheme !== 'dark') {
-        newTheme = 'dark';
-        themeIcon.classList.replace('fa-moon', 'fa-sun');
-      } else {
-        themeIcon.classList.replace('fa-sun', 'fa-moon');
-      }
-
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-
-    // 2. Portfolio Works Filter Script
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const workCards = document.querySelectorAll('.work-card');
-
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filterValue = btn.getAttribute('data-filter');
-
-        workCards.forEach(card => {
-          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
