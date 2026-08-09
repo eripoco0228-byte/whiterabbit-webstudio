@@ -779,6 +779,18 @@
   color: #FFFFFF !important; /* サブテキスト・説明文を白にする */
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); /* 影をつけて浮き上がらせる */
 }   
+      /* ヒーローセクション（背景画像の上）の文字だけを絶対白にする設定 */
+.hero h1,
+[data-theme="dark"] .hero h1 {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-sub,
+[data-theme="dark"] .hero-sub {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
     
     
   </style>
@@ -813,7 +825,7 @@
     <div class="container hero-container">
       <div class="hero-content-box">
         <div class="hero-tag">
-          <i class="fa-solid fa-leaf"></i> 当レンタルサロンご利用者様限定
+          <i class="fa-solid fa-leaf"></i> \ 当レンタルサロンご利用者様限定 /
         </div>
         <h1>あなたのサロンの魅力を<br>シンプルで美しいWebサイトに。</h1>
         <p class="hero-sub">現場を知るサロンオーナーが寄り添う、個人セラピスト・施術者様のためのWeb制作＆運用サポートサービス。</p>
