@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -283,14 +281,13 @@
       display: flex;
       align-items: center;
       position: relative;
-      /* ↓↓↓ こちらの画像URLをご自身のサロン画像に置き換えてください ↓↓↓ */
-      background-image: url('https://eripoco0228-byte.github.io/whiterabbit-webstudio/DSC04399.jpg');
+      background-image: url('DSC04399.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
 
-    /* 写真の上にうっすら暗めのレイヤーを重ねて文字を見やすくする */
+    /* 写真の上に少し暗めのフィルターを重ねて白文字を見やすくする */
     .hero::before {
       content: '';
       position: absolute;
@@ -298,7 +295,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.35);
       z-index: 1;
     }
 
@@ -308,53 +305,50 @@
       width: 100%;
     }
 
-   /* ヒーローセクションのテキストエリア */
-.hero-content-box {
-  max-width: 680px;
-  background: transparent;          /* ← 背景を透明にする */
-  backdrop-filter: none;            /* ← すりガラス効果を解除 */
-  padding: 0;                       /* ← 白枠内の余白をリセット */
-  border-radius: 0;                 /* ← 角丸を解除 */
-  box-shadow: none;                 /* ← 影を解除 */
-  border: none;                     /* ← 枠線を解除 */
-}
-
-/* ダークモード時の指定も透明に上書き */
-[data-theme="dark"] .hero-content-box {
-  background: transparent;
-  border-color: transparent;
-}
-
-    
+    /* ヒーローセクションのテキストエリア */
+    .hero-content-box {
+      max-width: 680px;
+      background: transparent !important;
+      backdrop-filter: none;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
     }
 
     .hero-tag {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--accent-light);
+      background: rgba(255, 255, 255, 0.9) !important;
       border: 1px solid var(--accent-main);
       padding: 6px 16px;
       border-radius: 30px;
       font-size: 0.85rem;
       font-weight: 700;
-      color: var(--text-header);
+      color: #3C3835 !important;
       margin-bottom: 20px;
     }
 
-    .hero h1 {
+    /* ヒーロー内の文字（PC・スマホ・ダークモード共通で強制的に白） */
+    .hero h1,
+    [data-theme="dark"] .hero h1 {
       font-size: 2.3rem;
       font-weight: 700;
       margin-bottom: 20px;
-      color: var(--text-main);
+      color: #FFFFFF !important;
       line-height: 1.4;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
     }
 
-    .hero-sub {
-      font-size: 1rem;
-      color: var(--text-muted);
+    .hero-sub,
+    [data-theme="dark"] .hero-sub {
+      font-size: 1.05rem;
+      color: #FFFFFF !important;
       margin-bottom: 32px;
       line-height: 1.8;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6) !important;
+      opacity: 0.95;
     }
 
     /* ==========================================================================
@@ -736,10 +730,12 @@
       .hero {
         padding-top: 120px;
         padding-bottom: 60px;
+        background-position: left center;
+        min-height: 60vh;
       }
 
       .hero-content-box {
-        padding: 32px 20px;
+        padding: 0;
       }
 
       .hero h1 {
@@ -759,40 +755,7 @@
         flex-direction: column;
         gap: 12px;
       }
-   
- /* ヒーローセクション（背景画像の上）の文字だけを白にする設定 */
-.hero h1 {
-  color: #FFFFFF !important; /* 見出しを白にする */
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* 暗い影をつけて文字を読みやすくする */
-}
-
-.hero-sub {
-  color: #FFFFFF !important; /* サブテキスト・説明文を白にする */
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); /* 影をつけて浮き上がらせる */
-}   
-      /* ヒーローセクション（背景画像の上）の文字だけを絶対白にする設定 */
-.hero h1,
-[data-theme="dark"] .hero h1 {
-  color: #FFFFFF !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-.hero-sub,
-[data-theme="dark"] .hero-sub {
-  color: #FFFFFF !important;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-}
-    
-  /* スマホ（画面幅768px以下）のときだけ適用 */
-@media (max-width: 768px) {
-  .hero {
-    /* 中央ではなく、左上のグリーンやキャンドルの灯りが見える位置にずらす */
-    background-position: left center;
-    
-    /* ヒーローエリアの高さを少し抑えて極端な拡大を防ぐ */
-    min-height: 60vh;
-  }
-}  
+    }
   </style>
 </head>
 <body>
@@ -825,7 +788,7 @@
     <div class="container hero-container">
       <div class="hero-content-box">
         <div class="hero-tag">
-          <i class=""></i> \ 当レンタルサロンご利用者様限定 /
+          <i class="fa-solid fa-leaf"></i> 当レンタルサロンご利用者様限定
         </div>
         <h1>あなたのサロンの魅力を<br>シンプルで美しいWebサイトに。</h1>
         <p class="hero-sub">現場を知るサロンオーナーが寄り添う、個人セラピスト・施術者様のためのWeb制作＆運用サポートサービス。</p>
