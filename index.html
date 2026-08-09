@@ -14,10 +14,16 @@
     :root {
       --header-bg: #B9D8DE;        /* ペールブルー */
       --header-dark: #586064;      /* チャコールグレー */
-      --bg-main: #F9F6F0;        /* ミルクティーベージュ */
-      --text-main: #FFFFFF;        /* スマホ・PC共通で文字色を白に統一 */
-      --text-dark: #332F2C;
-      --accent-green: #06C755;
+      --bg-main: #F9F6F0;          /* ミルクティーベージュ */
+      --bg-card: #FFFFFF;
+      --text-main: #FFFFFF;        /* 写真上の白文字 */
+      --text-dark: #332F2C;        /* 通常テキスト */
+      --text-muted: #6E6761;
+      --accent-point: #D98880;
+      --accent-green: #06C755;     /* LINEグリーン */
+      --border-color: #E2DBD0;
+      --font-base: 'Noto Sans JP', sans-serif;
+      --font-en: 'Plus Jakarta Sans', sans-serif;
     }
 
     * {
@@ -27,12 +33,13 @@
     }
 
     body {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: var(--font-base);
       background-color: var(--bg-main);
       color: var(--text-dark);
+      line-height: 1.6;
     }
 
-    /* --- ヘッダー領域 --- */
+    /* --- 1. HEADER --- */
     .site-header {
       background-color: var(--header-bg);
       padding: 15px 5%;
@@ -41,35 +48,25 @@
       justify-content: space-between;
     }
 
-    /* 新しいロゴ画像 */
     .site-logo {
-      height: 45px;
+      height: 48px;
       width: auto;
       object-fit: contain;
     }
 
-    /* 右上：枠・背景・アイコンを消してシンプルな白文字に設定 */
-    .header-badge-text {
-      color: #FFFFFF;
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-
-    /* --- メインビジュアル領域 --- */
+    /* --- 2. HERO SECTION --- */
     .hero-section {
       position: relative;
       width: 100%;
-      min-height: 420px;
+      min-height: 480px;
       background: url('DSC04399.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
 
-    /* 写真上の暗めオーバーレイ（文字を白でくっきり見せるため） */
     .hero-section::before {
       content: "";
       position: absolute;
@@ -77,50 +74,262 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.38); /* 白文字を読みやすくするためのうっすらとしたオーバーレイ */
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
       max-width: 800px;
-      color: var(--text-main); /* PC・スマホ共通で文字色を完全に白に固定 */
+      color: var(--text-main);
+    }
+
+    /* タイトルの上の白文字限定表記 */
+    .hero-limited-tag {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.08em;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
     .hero-title {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      line-height: 1.5;
-      margin-bottom: 15px;
-      color: #FFFFFF; /* 明示的に白指定 */
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      line-height: 1.45;
+      margin-bottom: 18px;
+      color: #FFFFFF;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
     }
 
     .hero-sub {
       font-size: 1.05rem;
       font-weight: 500;
-      color: #FFFFFF; /* 明示的に白指定 */
-      text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+      color: #FFFFFF;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.35);
     }
 
-    /* モバイル調整 */
+    /* --- 3. MAIN CONTENT CONTAINER --- */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    /* --- 4. CONCERNS SECTION --- */
+    .concerns-wrapper {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 35px 30px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .sec-title {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--header-dark);
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .sec-title i {
+      color: var(--accent-point);
+    }
+
+    .concerns-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    .concern-item {
+      background: var(--bg-main);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid var(--header-bg);
+    }
+
+    .concern-item i {
+      color: var(--accent-point);
+    }
+
+    /* --- 5. PRICING SECTION --- */
+    .pricing-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 30px 25px;
+      border: 1.5px solid var(--border-color);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--header-bg);
+      box-shadow: 0 8px 25px rgba(185, 216, 222, 0.4);
+    }
+
+    .pop-ribbon {
+      position: absolute;
+      top: -14px;
+      left: 20px;
+      background: var(--header-bg);
+      color: var(--header-dark);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .price-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      margin-top: 5px;
+    }
+
+    .price-card.featured h3 {
+      color: var(--header-dark);
+    }
+
+    .price-num {
+      font-family: var(--font-en);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .price-card.featured .price-num {
+      color: var(--header-dark);
+      font-size: 2.2rem;
+    }
+
+    .price-num span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .price-detail {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      border-top: 1px dashed var(--border-color);
+      padding-top: 15px;
+    }
+
+    /* --- 6. CTA & QR SECTION --- */
+    .cta-wrapper {
+      background: #FFFFFF;
+      border: 2px solid var(--header-bg);
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .cta-info h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .cta-info p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .qr-container {
+      text-align: center;
+      flex-shrink: 0;
+      background: var(--bg-main);
+      padding: 15px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+    }
+
+    .qr-code-img {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+
+    .line-btn-tag {
+      background: var(--accent-green);
+      color: #FFFFFF;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* --- 7. FOOTER --- */
+    .site-footer {
+      background-color: var(--header-bg);
+      color: var(--header-dark);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* レスポンシブ調整（スマホ対応） */
     @media (max-width: 768px) {
       .site-header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        justify-content: center;
       }
       .site-logo {
         height: 38px;
       }
-      .header-badge-text {
-        font-size: 0.85rem;
+      .hero-limited-tag {
+        font-size: 0.95rem;
       }
       .hero-title {
-        font-size: 1.4rem;
+        font-size: 1.55rem;
       }
       .hero-sub {
         font-size: 0.9rem;
+      }
+      .cta-wrapper {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
@@ -129,18 +338,16 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <!-- 新ロゴ画像（WEB STUDIOロゴ_2.png） -->
     <img src="WEB STUDIOロゴ_2.png" alt="white rabbit WEB STUDIO" class="site-logo">
-    
-    <!-- 枠・背景・葉っぱを消した白文字表記 -->
-    <div class="header-badge-text">
-      \ 当レンタルサロン利用者様限定 /
-    </div>
   </header>
 
   <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="hero-content">
+      <!-- メインタイトルの上に配置した限定表記 -->
+      <div class="hero-limited-tag">
+        \ 当レンタルサロン利用者様限定 /
+      </div>
       <h1 class="hero-title">
         あなたのサロンの魅力を<br>シンプルで美しいWebサイトに
       </h1>
@@ -149,6 +356,72 @@
       </p>
     </div>
   </section>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+
+    <!-- CONCERNS -->
+    <section class="concerns-wrapper">
+      <div class="sec-title">
+        <i class="fa-solid fa-comments"></i> こんなお悩み、ありませんか？
+      </div>
+      <div class="concerns-grid">
+        <div class="concern-item"><i class="fa-solid fa-circle-check"></i> 制作会社だと高額で諦めていた</div>
+        <div class="concern-item"><i class="fa-solid fa-circle-check"></i> SNS以外の信頼できるHPが欲しい</div>
+        <div class="concern-item"><i class="fa-solid fa-circle-check"></i> 予約や公式LINEへスムーズに導きたい</div>
+        <div class="concern-item"><i class="fa-solid fa-circle-check"></i> パソコン操作や制作後の管理が不安</div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing-wrapper">
+      <!-- サブスク安心プラン -->
+      <div class="price-card featured">
+        <span class="pop-ribbon"><i class="fa-solid fa-heart"></i> 一番人気</span>
+        <div>
+          <h3>サブスク安心プラン</h3>
+          <div class="price-num">¥3,980 <span>/月（税込）</span></div>
+        </div>
+        <div class="price-detail">
+          初期費用 ¥19,800（税込）<br>
+          <strong>月2回までの修正・更新サポート付き！</strong><br>作った後もずっと安心して任せられます。
+        </div>
+      </div>
+
+      <!-- シンプル買い切りプラン -->
+      <div class="price-card">
+        <div>
+          <h3>シンプル買い切りプラン</h3>
+          <div class="price-num">¥39,800 <span>（税込）</span></div>
+        </div>
+        <div class="price-detail">
+          月額費用なし（一括払い）<br>
+          ランニングコストをかけずに自分のWebサイトを持ちたい方に。
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA & QR CODE -->
+    <section class="cta-wrapper">
+      <div class="cta-info">
+        <h3>デザインサンプルをご覧になりたい方や<br>まずは無料で相談してみたい方はこちら</h3>
+        <p>「こんなサイト作れる？」「まだ準備中だけど…」など<br>サロンのご利用ついでにお気軽にLINEでお尋ねください♪</p>
+      </div>
+      <div class="qr-container">
+        <!-- QRコード画像（必要に応じて line-qr.png などに差し替え） -->
+        <img src="line-qr.png" alt="公式LINE QRコード" class="qr-code-img" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://line.me'">
+        <div>
+          <span class="line-btn-tag"><i class="fa-brands fa-line"></i> LINEで相談</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    white rabbit WEB STUDIO | サロン特化型Web制作＆運用サポート
+  </footer>
 
 </body>
 </html>
