@@ -1,3 +1,11 @@
+/* white rabbit WEB STUDIO v5
+   GitHub直下構成:
+   index.html
+   style.css
+   script.js
+   logo.png
+   DSC04399.jpg
+*/
 :root{
   --header:#bad6d9;
   --accent:#70a9b5;
@@ -79,7 +87,7 @@ html[data-theme="dark"] .theme-toggle .moon{display:inline}
 .hero{min-height:calc(100vh - 84px);position:relative;display:grid;place-items:center;overflow:hidden}
 .hero-bg{
   position:absolute;inset:0;
-  background-image:url("assets/hero.jpg");
+  background-image:url("DSC04399.jpg");
   background-size:cover;
   background-position:center 48%;
   transform:scale(1.02)
@@ -154,7 +162,7 @@ html[data-theme="dark"] .theme-toggle .moon{display:inline}
 .design-card:hover{transform:translateY(-6px)}
 .design-image{
   height:360px;position:relative;display:grid;place-items:center;
-  background-image:linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.10)),url("assets/hero.jpg");
+  background-image:linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.10)),url("DSC04399.jpg");
   background-size:cover;background-position:center
 }
 .design-image span{
