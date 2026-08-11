@@ -959,3 +959,31 @@ footer p{
     margin-top:8px !important;
   }
 }
+/* HERO 最終微調整 */
+
+.hero-copy h1,
+.hero h1{
+  color:#ffffff !important;
+  opacity:1 !important;
+  margin-left:0 !important;
+  padding-left:0 !important;
+  text-shadow:0 3px 18px rgba(0,0,0,.38);
+}
+
+.hero-copy{
+  margin-left:8vw !important;
+}
+
+.hero-en{
+  color:rgba(255,255,255,.9) !important;
+}
+
+.hero-copy > p{
+  color:#ffffff !important;
+}
+
+@media(max-width:850px){
+  .hero-copy{
+    margin-left:7vw !important;
+  }
+}
