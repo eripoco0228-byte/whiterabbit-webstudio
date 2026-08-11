@@ -148,7 +148,7 @@ nav .reserve{
   height:calc(100vh - 120px);
   min-height:650px;
   position:relative;
-  background:url("images/hero.jpg") center 55% / cover no-repeat;
+  background:url("../../hero.jpg") center 55% / cover no-repeat;
   display:flex;
   align-items:center;
 }
