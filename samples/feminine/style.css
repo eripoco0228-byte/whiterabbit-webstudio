@@ -1,0 +1,139 @@
+:root{
+  --ivory:#fffaf8;
+  --pink:#d9aaa9;
+  --pink-dark:#ac7778;
+  --pink-pale:#f7e9e8;
+  --rose:#c99191;
+  --greige:#d9cec8;
+  --beige:#f0e8e2;
+  --brown:#675956;
+  --ink:#554d4b;
+  --muted:#857876;
+  --line:#eaded9;
+  --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3,.brand strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
+
+.sample-bar{height:38px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;background:#6f5d5d;color:#fff;font-size:11px;letter-spacing:.08em;position:relative;z-index:30}
+.sample-bar span{font-weight:700;letter-spacing:.18em}
+.site-header{height:84px;padding:8px 5vw;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:25;background:rgba(255,250,248,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,170,169,.22)}
+.brand{display:flex;flex-direction:column;line-height:1.05}
+.brand-small{font-size:9px;letter-spacing:.21em;text-transform:uppercase;color:var(--pink-dark)}
+.brand strong{font-size:35px;font-weight:400;letter-spacing:.08em;color:#9b6c6f}
+.site-header nav{display:flex;align-items:center;gap:24px;font-size:11px;letter-spacing:.11em}
+.site-header nav .reserve{padding:10px 16px;border:1px solid var(--pink)}
+.menu-btn{display:none;border:0;background:none;color:var(--pink-dark);font-size:22px}
+.mobile-nav{display:none}
+
+.hero{height:calc(100vh - 122px);min-height:650px;position:relative;display:flex;align-items:center;overflow:hidden;background:url("images/hero.jpg") center 52%/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(70,49,51,.60),rgba(83,58,60,.31) 42%,rgba(78,57,59,.10) 78%);z-index:1}
+.hero-copy{position:relative;z-index:2;width:min(700px,86vw);margin-left:8vw;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.22)}
+.eyebrow{font-size:11px;letter-spacing:.25em;margin-bottom:18px}
+.hero h1{font-size:clamp(40px,5vw,68px);font-weight:400;line-height:1.48;letter-spacing:.035em;margin-bottom:20px}
+.hero-copy>p:not(.eyebrow){font-size:16px;line-height:2}
+.btn{display:inline-block;margin-top:28px;padding:13px 30px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--pink-dark);font-size:12px;font-weight:700;letter-spacing:.08em}
+.hero-location{position:absolute;right:3vw;bottom:28px;z-index:2;color:#fff;font-size:10px;letter-spacing:.25em}
+
+.section{padding:110px clamp(22px,8vw,120px)}
+.section-title>p,.mini{margin-bottom:10px;color:var(--pink-dark);font-size:10px;font-weight:700;letter-spacing:.28em}
+.section-title h2,.access h2,.beauty-section h2,.therapist-section h2{color:var(--brown);font-size:clamp(30px,4vw,48px);font-weight:400;line-height:1.58}
+.section-title.center{text-align:center;margin-bottom:50px}
+.section-title.center span{font-size:13px;color:var(--muted)}
+
+.concept-grid,.beauty-grid,.access-grid,.therapist-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.concept-photo img{aspect-ratio:4/3;object-fit:cover;border-radius:120px 18px 120px 18px}
+.concept-copy .lead{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:21px;color:var(--brown);line-height:2}
+.concept-points{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.concept-points span{padding:8px 15px;border:1px solid var(--greige);border-radius:999px;font-size:11px}
+
+.menu-section{background:linear-gradient(180deg,var(--pink-pale),#fdf8f6)}
+.menu-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.menu-card{position:relative;padding:42px 30px;background:#fff;border:1px solid rgba(217,170,169,.25);border-radius:24px}
+.menu-card.featured{transform:translateY(-8px);box-shadow:0 18px 45px rgba(126,84,86,.10);border-color:var(--pink)}
+.tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:4px 15px;border-radius:999px;background:var(--pink-dark);color:#fff;font-size:9px;letter-spacing:.14em}
+.menu-no{font-family:serif;font-size:27px;color:#d1b1ad}
+.menu-card h3{font-size:25px;color:var(--brown);font-weight:400;margin-bottom:0}
+.menu-card .jp{font-size:12px;color:#817371}
+.price{font-family:serif;font-size:23px;color:var(--pink-dark);margin:20px 0}
+.menu-card>p:last-child{font-size:13px}
+.menu-note{text-align:center;font-size:11px;color:#938886;margin-top:26px}
+
+.beauty-section{background:#fff}
+.beauty-photo img{aspect-ratio:4/5;object-fit:cover;border-radius:18px 130px 18px 130px}
+.beauty-copy h2{margin-bottom:28px}
+.beauty-list,.therapist-values{margin-top:32px;border-top:1px solid var(--line)}
+.beauty-list div,.therapist-values div{display:flex;align-items:center;gap:22px;padding:15px 0;border-bottom:1px solid var(--line)}
+.beauty-list strong,.therapist-values span{color:var(--pink-dark);font-size:11px;letter-spacing:.12em}
+.beauty-list span,.therapist-values p{font-size:13px;margin:0}
+
+.therapist-section{background:#faf3f1}
+.therapist-photo img{height:620px;object-fit:cover;border-radius:180px 180px 24px 24px}
+.therapist-copy{max-width:580px}
+.therapist-name{margin-bottom:30px!important}
+.therapist-name span{display:block;margin-bottom:5px;color:var(--pink-dark);font-size:11px;letter-spacing:.16em}
+.therapist-name strong{font-size:28px;font-weight:400;letter-spacing:.08em}
+.therapist-copy>p{margin-bottom:20px}
+.therapist-note{margin-top:20px!important;color:#9a8c89;font-size:10px}
+
+.salon-section{background:#f2ebe7}
+.gallery{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:270px 270px;gap:15px}
+.gallery img{height:100%;object-fit:cover;border-radius:18px}
+.g1{grid-row:1/3}
+.caption{text-align:center;font-size:11px;color:#847976;margin-top:22px}
+
+.access-photo img{aspect-ratio:4/5;object-fit:cover;border-radius:130px 18px 130px 18px}
+.access-copy dl{margin:25px 0}
+.access-copy dl div{display:grid;grid-template-columns:90px 1fr;padding:11px 0;border-bottom:1px solid var(--line)}
+.access-copy dt{color:var(--pink-dark);font-size:11px;font-weight:700}
+.access-copy dd{margin:0;font-size:13px}
+.map-placeholder{height:180px;display:grid;place-items:center;border-radius:18px;background:#eee4df;color:#918681;font-size:12px}
+
+.contact{padding:110px 20px;background:#a97879;color:#fff;text-align:center}
+.contact-inner{max-width:650px;margin:auto}
+.contact .mini{color:#f2d9d7}
+.contact h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:38px;font-weight:400}
+.line-btn{display:inline-flex;align-items:center;gap:13px;margin-top:26px;padding:14px 25px;border-radius:999px;background:#fff;color:#9b696b;font-weight:700}
+.line-btn span{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#06c755;color:#fff;font-size:9px}
+.contact-note{margin-top:13px;font-size:10px;opacity:.78}
+
+.site-footer{padding:30px 5vw;display:flex;align-items:end;justify-content:space-between;background:#655253;color:#e9dddb}
+.footer-brand{display:flex;flex-direction:column}
+.footer-brand span{font-size:9px;letter-spacing:.18em;color:#d5c1bf}
+.footer-brand strong{font-size:28px;font-weight:400;color:#fff}
+.site-footer p{margin:0;font-size:10px}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .site-header nav{display:none}.menu-btn{display:block}
+  .mobile-nav{position:fixed;top:122px;left:0;right:0;z-index:24;padding:18px 24px;background:var(--ivory);border-bottom:1px solid var(--line)}
+  .mobile-nav.open{display:grid}
+  .mobile-nav a{padding:10px 0;border-bottom:1px solid var(--line);font-size:12px}
+  .hero{height:720px;background-position:60% center}
+  .hero-overlay{background:linear-gradient(180deg,rgba(73,51,53,.16),rgba(80,55,57,.66))}
+  .hero-copy{width:86vw;margin:auto 7vw 80px;align-self:flex-end}
+  .concept-grid,.beauty-grid,.access-grid,.therapist-grid{grid-template-columns:1fr;gap:38px}
+  .menu-grid{grid-template-columns:1fr}
+  .menu-card.featured{transform:none}
+  .therapist-photo img{height:470px}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:240px 200px}
+  .g1{grid-column:1/3;grid-row:auto}
+}
+@media(max-width:560px){
+  .sample-bar{height:34px;padding:0 14px;font-size:8px}
+  .site-header{height:72px;padding:7px 16px}.brand strong{font-size:28px}
+  .hero{height:680px;min-height:0}.hero-copy{width:88vw;margin:auto 6vw 58px}.hero h1{font-size:36px}
+  .section{padding:80px 20px}
+  .concept-photo img,.beauty-photo img,.access-photo img{border-radius:35px}
+  .therapist-photo img{height:380px;border-radius:90px 90px 20px 20px}
+  .gallery{grid-template-columns:1fr;grid-template-rows:auto}
+  .gallery img{height:220px}.g1{grid-column:auto}
+  .site-footer{display:block;text-align:center}.site-footer p{margin-top:15px}
+}
