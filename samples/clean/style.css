@@ -636,3 +636,22 @@ nav .reserve{
     height: 360px;
   }
 }
+.therapist-photo img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .therapist-photo img {
+    height: 460px;
+  }
+}
+
+@media (max-width: 560px) {
+  .therapist-photo img {
+    height: 360px;
+  }
+}
