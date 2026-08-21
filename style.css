@@ -311,3 +311,11 @@ footer{
   }
 
 }
+  .desktop-nav {
+    margin-left: auto;
+    margin-right: 46px;
+  }
+
+  .header-actions {
+    flex-shrink: 0;
+  }
