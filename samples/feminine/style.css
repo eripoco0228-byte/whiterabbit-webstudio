@@ -608,3 +608,181 @@ body {
   background: var(--f-pink);
   color: var(--f-white);
 }
+/* =========================================================
+   FEMININE HERO REFINEMENT
+   白パネル撤去＋写真上にコピーを直接配置
+========================================================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 背景写真の左側だけ、文字が読みやすいように淡く整える */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 253, 253, 0.92) 0%,
+      rgba(255, 250, 252, 0.72) 26%,
+      rgba(255, 250, 252, 0.34) 48%,
+      rgba(255, 255, 255, 0.05) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  pointer-events: none;
+}
+
+/* 既存の暗いオーバーレイは無効化 */
+.hero-overlay {
+  background: none !important;
+}
+
+/* 白い四角いパネルを完全撤去 */
+.hero-copy {
+  position: relative;
+  z-index: 2;
+
+  width: min(650px, 48vw);
+  margin-left: 8vw;
+
+  padding: 0;
+
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+
+  color: var(--f-ink);
+  text-shadow: none;
+}
+
+/* 小見出し */
+.hero-copy .eyebrow {
+  margin-bottom: 20px;
+
+  color: var(--f-pink-dark);
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+/* メインコピー */
+.hero-copy h1 {
+  margin-bottom: 24px;
+
+  color: var(--f-ink);
+
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+}
+
+/* 説明文 */
+.hero-copy > p:not(.eyebrow) {
+  margin-bottom: 0;
+
+  color: var(--f-brown);
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* 予約ボタン */
+.hero-copy .btn {
+  margin-top: 30px;
+
+  padding: 13px 30px;
+
+  background: var(--f-pink-dark);
+  color: #fff;
+
+  border: none;
+  border-radius: 999px;
+
+  box-shadow:
+    0 8px 24px rgba(201, 127, 145, 0.18);
+}
+
+.hero-copy .btn:hover {
+  background: var(--f-rose);
+  transform: translateY(-2px);
+}
+
+/* 右下ロケーション */
+.hero-location {
+  z-index: 2;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  text-shadow:
+    0 1px 8px rgba(60, 45, 45, 0.25);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 250, 252, 0.28) 42%,
+        rgba(255, 250, 252, 0.88) 100%
+      );
+  }
+
+  .hero-copy {
+    width: 86vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-bottom: 70px;
+    align-self: flex-end;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(38px, 7vw, 54px);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 560px) {
+
+  .hero-copy {
+    width: 88vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-bottom: 52px;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 9px;
+  }
+
+  .hero-copy h1 {
+    font-size: 34px;
+    line-height: 1.55;
+  }
+
+  .hero-copy > p:not(.eyebrow) {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .hero-copy .btn {
+    margin-top: 24px;
+  }
+}
