@@ -786,3 +786,19 @@ body {
     margin-top: 24px;
   }
 }
+/* MENU：POPULARラベルがカード上部で切れないように修正 */
+.menu-card {
+  overflow: visible;
+}
+
+.menu-card.featured {
+  position: relative;
+}
+
+.menu-card .tag {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
