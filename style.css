@@ -161,18 +161,45 @@ html[data-theme="dark"] .theme-toggle .moon{display:inline}
 }
 .design-card:hover{transform:translateY(-6px)}
 .design-image{
-  height:360px;position:relative;display:grid;place-items:center;
-  background-image:linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.10)),url("DSC04399.jpg");
-  background-size:cover;background-position:center
+  height:360px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  background-size:cover;
+  background-position:center;
 }
+
+/* 各サンプルサイトの紹介画像 */
+.design-image.natural{
+  background-image:
+    linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.10)),
+    url("sample-natural.jpg");
+}
+
+.design-image.elegant{
+  background-image:
+    linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.10)),
+    url("sample-elegant.jpg");
+}
+
+.design-image.clean{
+  background-image:
+    linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.10)),
+    url("sample-clean.jpg");
+}
+
+.design-image.feminine{
+  background-image:
+    linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.10)),
+    url("sample-feminine.jpg");
+}
+
 .design-image span{
-  font-family:Georgia,serif;font-size:50px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.35)
-}
-.design-image.natural{filter:saturate(.75) sepia(.10);background-position:center 46%}
-.design-image.elegant{filter:saturate(.55) contrast(.96);background-position:58% center}
-.design-image.clean{filter:saturate(.35) brightness(1.07);background-position:35% center}
-.design-image.feminine{filter:sepia(.16) saturate(.85) hue-rotate(320deg);background-position:62% center}
-.design-info{padding:28px 30px}
+  font-family:Georgia,serif;
+  font-size:50px;
+  color:#fff;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}.design-info{padding:28px 30px}
 .style-no{font-size:11px;letter-spacing:.19em;color:var(--accent);font-weight:800}
 .design-info h3{font-family:Georgia,serif;font-size:30px;color:var(--heading);margin-bottom:4px}
 .view-link{display:inline-block;margin-top:14px;color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.08em}
