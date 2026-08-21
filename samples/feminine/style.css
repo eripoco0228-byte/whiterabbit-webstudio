@@ -802,3 +802,488 @@ body {
   transform: translateX(-50%);
   z-index: 10;
 }
+/* =========================================================
+   FEMININE / Miel
+   MOBILE FINAL OPTIMIZATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------- 全体 ---------- */
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .section {
+    padding: 72px 20px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .site-header {
+    height: 96px;
+    padding: 12px 24px;
+  }
+
+  .brand-small {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
+  .brand strong {
+    font-size: 40px;
+  }
+
+  .menu-btn {
+    font-size: 28px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    min-height: 620px;
+    height: auto;
+    background-position: 67% center;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.10) 0%,
+        rgba(255,250,252,0.22) 34%,
+        rgba(255,250,252,0.92) 100%
+      );
+  }
+
+  .hero-copy {
+    width: 100%;
+    margin: 0;
+    padding: 0 24px 42px;
+    align-self: flex-end;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.20em;
+    margin-bottom: 14px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 18px;
+  }
+
+  .hero-copy > p:not(.eyebrow) {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .hero-copy .btn {
+    margin-top: 22px;
+    padding: 12px 24px;
+    font-size: 12px;
+  }
+
+  .hero-location {
+    right: 18px;
+    bottom: 16px;
+    font-size: 8px;
+  }
+
+
+  /* ---------- 共通見出し ---------- */
+
+  .section-title h2,
+  .section-heading h2,
+  .beauty-copy h2,
+  .therapist-copy h2,
+  .access-copy h2 {
+    font-size: clamp(31px, 8vw, 42px);
+    line-height: 1.55;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .section-title.center {
+    margin-bottom: 38px;
+  }
+
+  .section-title.center span,
+  .section-heading span {
+    font-size: 12px;
+  }
+
+
+  /* ---------- CONCEPT ---------- */
+
+  .concept-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .concept-photo {
+    order: 1;
+  }
+
+  .concept-copy {
+    order: 2;
+  }
+
+  .concept-photo img {
+    aspect-ratio: 4 / 3;
+    border-radius: 42px 12px 42px 12px;
+  }
+
+  .concept-copy .lead {
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  .concept-copy p {
+    font-size: 14px;
+    line-height: 1.95;
+  }
+
+  .concept-points {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .concept-points span {
+    font-size: 10px;
+    padding: 7px 12px;
+  }
+
+
+  /* ---------- MENU ---------- */
+
+  .menu-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 16px;
+  }
+
+  .menu-card {
+    padding: 34px 26px;
+    border-radius: 18px;
+  }
+
+  .menu-card.featured {
+    transform: none;
+  }
+
+  .menu-no {
+    font-size: 24px;
+  }
+
+  .menu-card h3 {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .menu-card > p:last-child {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .menu-card .tag {
+    top: -14px;
+  }
+
+  .menu-note {
+    font-size: 10px;
+    line-height: 1.7;
+    margin-top: 22px;
+  }
+
+
+  /* ---------- BEAUTY STYLE ---------- */
+
+  .beauty-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .beauty-copy {
+    order: 1;
+  }
+
+  .beauty-photo {
+    order: 2;
+  }
+
+  .beauty-copy p {
+    font-size: 14px;
+    line-height: 1.95;
+  }
+
+  .beauty-photo img {
+    aspect-ratio: 4 / 5;
+    border-radius: 18px 70px 18px 70px;
+  }
+
+  .beauty-list {
+    margin-top: 26px;
+  }
+
+  .beauty-list div {
+    gap: 16px;
+    padding: 13px 0;
+  }
+
+  .beauty-list span {
+    font-size: 12px;
+  }
+
+
+  /* ---------- THERAPIST ---------- */
+
+  .therapist-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .therapist-photo img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 70px 70px 18px 18px;
+  }
+
+  .therapist-copy {
+    max-width: none;
+  }
+
+  .therapist-name strong {
+    font-size: 26px;
+  }
+
+  .therapist-copy > p {
+    font-size: 14px;
+    line-height: 1.95;
+  }
+
+  .therapist-values div {
+    gap: 16px;
+    padding: 13px 0;
+  }
+
+  .therapist-values p {
+    font-size: 12px;
+  }
+
+
+  /* ---------- SALON ---------- */
+
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+
+  .gallery .g1,
+  .gallery .g2,
+  .gallery .g3 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .gallery img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+  }
+
+  .caption {
+    font-size: 9px;
+    line-height: 1.7;
+    padding: 0 8px;
+  }
+
+
+  /* ---------- ACCESS ---------- */
+
+  .access-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .access-photo {
+    order: 2;
+  }
+
+  .access-copy {
+    order: 1;
+  }
+
+  .access-photo img {
+    aspect-ratio: 4 / 5;
+    border-radius: 55px 14px 55px 14px;
+  }
+
+  .access-copy p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .access-copy dl div {
+    grid-template-columns: 78px 1fr;
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  .access-copy dt {
+    font-size: 10px;
+  }
+
+  .access-copy dd {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .map-placeholder {
+    height: 150px;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact {
+    padding: 80px 20px 90px;
+  }
+
+  .contact-inner {
+    max-width: 100%;
+  }
+
+  .contact .mini {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+  }
+
+  .contact h2 {
+    font-size: clamp(31px, 8vw, 42px);
+    line-height: 1.4;
+    letter-spacing: 0;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .contact-inner > p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .line-btn {
+    width: min(100%, 360px);
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+
+  .line-btn span {
+    flex-shrink: 0;
+  }
+
+  .contact-note {
+    font-size: 9px !important;
+    line-height: 1.7;
+    padding: 0 8px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .site-footer {
+    padding: 28px 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-brand strong {
+    font-size: 26px;
+  }
+
+  .site-footer p {
+    margin-top: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL SMARTPHONE
+   iPhone mini系など
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .site-header {
+    height: 92px;
+    padding: 10px 18px;
+  }
+
+  .brand strong {
+    font-size: 36px;
+  }
+
+  .hero {
+    min-height: 590px;
+  }
+
+  .hero-copy {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-copy h1 {
+    font-size: 33px;
+  }
+
+  .section {
+    padding: 64px 18px;
+  }
+
+  .section-title h2,
+  .section-heading h2,
+  .beauty-copy h2,
+  .therapist-copy h2,
+  .access-copy h2 {
+    font-size: 30px;
+  }
+
+  .contact h2 {
+    font-size: 30px;
+    line-height: 1.45;
+  }
+
+  .line-btn {
+    font-size: 14px;
+  }
+
+}
