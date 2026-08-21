@@ -137,3 +137,474 @@ h1,h2,h3,.brand strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
   .gallery img{height:220px}.g1{grid-column:auto}
   .site-footer{display:block;text-align:center}.site-footer p{margin-top:15px}
 }
+/* =========================================================
+   FEMININE COLOR THEME
+   Miel / white rabbit WEB STUDIO
+   Elegantとの差別化用 最終カラースタイル
+========================================================= */
+
+:root {
+  --f-white: #ffffff;
+  --f-ivory: #fffdfd;
+  --f-pink: #efb7c3;
+  --f-pink-dark: #c97f91;
+  --f-pink-pale: #fff0f4;
+  --f-rose: #d99aaa;
+  --f-lavender: #f8f2f8;
+  --f-greige: #d9d2dc;
+  --f-beige: #f7f3f5;
+  --f-ink: #5d555b;
+  --f-brown: #6f626c;
+  --f-muted: #938891;
+  --f-line: #eee3e8;
+}
+
+
+/* ---------- 全体 ---------- */
+
+body {
+  background: var(--f-ivory);
+  color: var(--f-ink);
+}
+
+
+/* ---------- SAMPLE SITE BAR ---------- */
+
+.sample-bar {
+  background: var(--f-pink-dark);
+  color: var(--f-white);
+}
+
+.sample-bar a {
+  color: var(--f-white);
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  background: rgba(255, 253, 253, 0.96);
+  border-bottom: 1px solid var(--f-line);
+}
+
+.brand {
+  color: var(--f-ink);
+}
+
+.brand-small {
+  color: var(--f-pink-dark);
+}
+
+.site-header nav a {
+  color: var(--f-brown);
+}
+
+.site-header nav a:hover {
+  color: var(--f-pink-dark);
+}
+
+
+/* RESERVATION */
+
+.site-header nav .reserve {
+  border: 1px solid var(--f-pink);
+  color: var(--f-pink-dark);
+  background: var(--f-white);
+}
+
+.site-header nav .reserve:hover {
+  background: var(--f-pink);
+  color: var(--f-white);
+}
+
+
+/* ---------- MOBILE NAV ---------- */
+
+.menu-btn {
+  color: var(--f-pink-dark);
+}
+
+.mobile-nav {
+  background: var(--f-ivory);
+}
+
+.mobile-nav a {
+  color: var(--f-brown);
+  border-bottom: 1px solid var(--f-line);
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero-copy {
+  background: rgba(255, 250, 252, 0.94);
+}
+
+.hero-copy .eyebrow {
+  color: var(--f-pink-dark);
+}
+
+.hero-copy h1 {
+  color: var(--f-ink);
+}
+
+.hero-copy p {
+  color: var(--f-brown);
+}
+
+.hero-location {
+  color: var(--f-white);
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.btn {
+  background: var(--f-pink-dark);
+  color: var(--f-white);
+  border: 1px solid var(--f-pink-dark);
+}
+
+.btn:hover {
+  background: var(--f-rose);
+  border-color: var(--f-rose);
+}
+
+
+/* ---------- SECTION COMMON ---------- */
+
+.section {
+  color: var(--f-ink);
+}
+
+.section-title p,
+.section-heading .mini,
+.mini {
+  color: var(--f-pink-dark);
+}
+
+.section-title h2,
+.section-heading h2 {
+  color: var(--f-ink);
+}
+
+.section-title span,
+.section-heading span {
+  color: var(--f-muted);
+}
+
+
+/* ---------- CONCEPT ---------- */
+
+.concept {
+  background: var(--f-ivory);
+}
+
+.concept-copy {
+  color: var(--f-brown);
+}
+
+.concept-copy .lead {
+  color: var(--f-ink);
+}
+
+.concept-points span {
+  background: var(--f-pink-pale);
+  border: 1px solid var(--f-line);
+  color: var(--f-pink-dark);
+
+  border-radius: 30px;
+}
+
+
+/* ---------- MENU ---------- */
+
+.menu-section {
+  background:
+    linear-gradient(
+      180deg,
+      #fff0f4 0%,
+      #fffafb 100%
+    );
+}
+
+.menu-card {
+  background: var(--f-white);
+  border: 1px solid var(--f-line);
+  border-radius: 18px;
+}
+
+.menu-card:hover {
+  box-shadow: 0 14px 35px rgba(153, 105, 120, 0.10);
+}
+
+.menu-no {
+  color: var(--f-pink);
+}
+
+.menu-card h3 {
+  color: var(--f-ink);
+}
+
+.menu-card .jp {
+  color: var(--f-muted);
+}
+
+.price {
+  color: var(--f-pink-dark);
+}
+
+
+/* 人気メニュー */
+
+.menu-card.featured {
+  border: 1px solid var(--f-pink);
+}
+
+.menu-card .tag {
+  background: var(--f-pink-dark);
+  color: var(--f-white);
+}
+
+.menu-note {
+  color: var(--f-muted);
+}
+
+
+/* ---------- BEAUTY / SERVICE ---------- */
+
+.beauty-section {
+  background: var(--f-white);
+}
+
+.beauty-copy h2 {
+  color: var(--f-ink);
+}
+
+.beauty-copy p {
+  color: var(--f-brown);
+}
+
+
+/* ---------- THERAPIST ---------- */
+
+.therapist-section {
+  background: var(--f-lavender);
+}
+
+.therapist-copy .mini {
+  color: var(--f-pink-dark);
+}
+
+.therapist-copy h2 {
+  color: var(--f-ink);
+}
+
+.therapist-copy p {
+  color: var(--f-brown);
+}
+
+.therapist-name span {
+  color: var(--f-muted);
+}
+
+.therapist-name strong {
+  color: var(--f-pink-dark);
+}
+
+.therapist-values {
+  border-top: 1px solid var(--f-line);
+}
+
+.therapist-values div {
+  border-bottom: 1px solid var(--f-line);
+}
+
+.therapist-values span {
+  color: var(--f-pink);
+}
+
+.therapist-values p {
+  color: var(--f-ink);
+}
+
+.therapist-note {
+  color: var(--f-muted) !important;
+}
+
+
+/* 写真にも少し柔らかさを */
+
+.therapist-photo img {
+  border-radius: 20px;
+}
+
+
+/* ---------- SALON ---------- */
+
+.salon-section {
+  background: #fdf4f7;
+}
+
+.salon-section .section-title p,
+.salon-section .mini {
+  color: var(--f-pink-dark);
+}
+
+.salon-section h2 {
+  color: var(--f-ink);
+}
+
+.salon-section .caption,
+.caption {
+  color: var(--f-muted);
+}
+
+
+/* 写真をElegantより柔らかく */
+
+.gallery img {
+  border-radius: 16px;
+}
+
+
+/* ---------- ACCESS ---------- */
+
+.access {
+  background: var(--f-ivory);
+}
+
+.access-copy .mini {
+  color: var(--f-pink-dark);
+}
+
+.access-copy h2 {
+  color: var(--f-ink);
+}
+
+.access-copy p {
+  color: var(--f-brown);
+}
+
+.access-copy dl {
+  border-top: 1px solid var(--f-line);
+}
+
+.access-copy dl div {
+  border-bottom: 1px solid var(--f-line);
+}
+
+.access-copy dt {
+  color: var(--f-pink-dark);
+}
+
+.access-copy dd {
+  color: var(--f-brown);
+}
+
+.map-placeholder {
+  background: var(--f-pink-pale);
+  border: 1px solid var(--f-line);
+  color: var(--f-muted);
+  border-radius: 14px;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+  background: #d996a8;
+  color: var(--f-white);
+}
+
+.contact .mini {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.contact h2 {
+  color: var(--f-white);
+}
+
+.contact p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* LINE BUTTON */
+
+.line-btn {
+  background: var(--f-white);
+  color: var(--f-pink-dark);
+  border-radius: 40px;
+}
+
+.line-btn:hover {
+  background: var(--f-pink-pale);
+  color: var(--f-pink-dark);
+}
+
+.line-btn span {
+  color: var(--f-pink-dark);
+}
+
+.contact-note {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  background: #665a63;
+  color: var(--f-white);
+}
+
+.footer-brand span {
+  color: var(--f-pink);
+}
+
+.footer-brand strong {
+  color: var(--f-white);
+}
+
+.site-footer p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sample-credit {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+
+/* ---------- FEMININE DETAIL ---------- */
+
+/*
+ Elegantとの差をさらに出すため、
+ Feminineではボックス・写真・ボタンの角を
+ 少し丸くして柔らかい印象に統一
+*/
+
+.menu-card,
+.map-placeholder,
+.gallery img,
+.therapist-photo img {
+  overflow: hidden;
+}
+
+.menu-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+}
+
+
+/* ---------- SELECTION ---------- */
+
+::selection {
+  background: var(--f-pink);
+  color: var(--f-white);
+}
