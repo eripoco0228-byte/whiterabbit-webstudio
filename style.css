@@ -810,3 +810,13 @@ br.sp-only {
   }
 
 }
+/* PCだけ改行 */
+.pc-only {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .pc-only {
+    display: block;
+  }
+}
