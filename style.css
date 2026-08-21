@@ -339,7 +339,6 @@ footer{
     display: block;
   }
 
-}
   .desktop-nav {
     margin-left: auto;
     margin-right: 46px;
@@ -348,6 +347,8 @@ footer{
   .header-actions {
     flex-shrink: 0;
   }
+}
+   
 /* =========================================
    DESIGN SAMPLE / PC 最終調整
 ========================================= */
@@ -366,6 +367,399 @@ footer{
     margin-right: auto;
     line-height: 1.9;
     text-align: center;
+  }
+
+}
+/* =========================================================
+   MAIN SITE
+   MOBILE FINAL OPTIMIZATION
+========================================================= */
+
+@media (max-width: 680px) {
+
+  /* ---------- 全体 ---------- */
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .section {
+    padding: 68px 18px;
+  }
+
+  .section-heading {
+    margin-bottom: 34px;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .site-header {
+    height: 94px;
+    padding: 10px 16px;
+  }
+
+  .logo {
+    width: 210px;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mobile-menu {
+    top: 94px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero-content {
+    width: 88vw;
+    padding: 72px 0 54px;
+  }
+
+  .hero-kicker {
+    font-size: 11px;
+    letter-spacing: .09em;
+    margin-bottom: 18px;
+    white-space: nowrap;
+  }
+
+  .hero h1 {
+    font-size: clamp(31px, 8.5vw, 37px);
+    line-height: 1.5;
+    letter-spacing: 0;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .hero h1 span {
+    display: block;
+  }
+
+  .hero-sub {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.9;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .hero-buttons {
+    margin-top: 26px;
+    gap: 12px;
+  }
+
+  .hero-note {
+    font-size: 10px;
+    line-height: 1.7;
+    margin-top: 16px;
+  }
+
+
+  /* ---------- 共通見出し ---------- */
+
+  .section-heading h2 {
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.45;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .section-heading .en {
+    font-size: 10px;
+    letter-spacing: .20em;
+  }
+
+  .section-heading > p:last-child {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.9;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+
+  /* ---------- TROUBLE ---------- */
+
+  .trouble-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .trouble-card {
+    padding: 26px 24px;
+    min-height: auto;
+  }
+
+  .trouble-card .icon {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .trouble-card h3 {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .trouble-card p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+
+  /* ---------- WHY ---------- */
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .why-card {
+    padding: 28px 24px;
+  }
+
+  .why-card h3 {
+    font-size: 19px;
+    line-height: 1.55;
+    padding-right: 46px;
+  }
+
+  .why-card p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .number {
+    font-size: 34px;
+    top: 18px;
+    right: 20px;
+  }
+
+
+  /* ---------- DESIGN SAMPLE ---------- */
+
+  .design-section .section-heading > p:not(.en) {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.9;
+    text-align: center;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .design-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .design-image {
+    height: 250px;
+  }
+
+  .design-image span {
+    font-size: 38px;
+  }
+
+  .design-info {
+    padding: 22px 22px 24px;
+  }
+
+  .design-info h3 {
+    font-size: 26px;
+  }
+
+  .design-info > p:not(.style-no) {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .sample-custom-note {
+    margin-top: 26px;
+    padding: 20px 22px;
+  }
+
+  .sample-custom-note p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+
+  /* ---------- PRICE ---------- */
+
+  .price-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .price-card {
+    padding: 34px 24px;
+  }
+
+  .plan-name {
+    font-size: 20px;
+  }
+
+  .price strong {
+    font-size: 44px;
+  }
+
+  .price span {
+    font-size: 20px;
+  }
+
+  .price small {
+    font-size: 12px;
+  }
+
+  .initial {
+    font-size: 13px;
+  }
+
+  .price-card li {
+    font-size: 13px;
+    line-height: 1.75;
+    padding-left: 24px;
+  }
+
+  .price-note {
+    padding: 22px 20px;
+  }
+
+  .price-note strong {
+    font-size: 16px;
+  }
+
+  .price-note p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+
+  /* ---------- PROCESS ---------- */
+
+  .process-step {
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+    padding-bottom: 34px;
+  }
+
+  .step-number {
+    width: 52px;
+    height: 52px;
+    font-size: 17px;
+  }
+
+  .process-list::before {
+    left: 25px;
+  }
+
+  .process-step h3 {
+    font-size: 19px;
+  }
+
+  .process-step p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-section {
+    padding: 80px 18px 90px;
+  }
+
+  .contact-logo {
+    width: min(300px, 78vw);
+    margin-bottom: 28px;
+  }
+
+  .contact-inner .en {
+    font-size: 10px;
+    letter-spacing: .20em;
+  }
+
+  .contact-inner h2 {
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.45;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .contact-inner > p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .line-button {
+    width: min(100%, 360px);
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 18px;
+    font-size: 15px;
+  }
+
+  .line-icon {
+    flex-shrink: 0;
+  }
+
+  .contact-note {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    display: block;
+    text-align: center;
+    padding: 24px 18px 30px;
+  }
+
+  footer a {
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL SMARTPHONE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .logo {
+    width: 195px;
+  }
+
+  .hero-content {
+    width: 90vw;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .contact-inner h2 {
+    font-size: 29px;
   }
 
 }
