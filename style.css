@@ -763,3 +763,50 @@ footer{
   }
 
 }
+/* =========================================================
+   MOBILE LINE BREAK FINAL TUNING
+========================================================= */
+
+/* PCではスマホ専用改行を無効 */
+br.sp-only {
+  display: none;
+}
+
+@media (max-width: 680px) {
+
+  /* スマホ専用改行を有効 */
+  br.sp-only {
+    display: block;
+  }
+
+  /* TROUBLE見出しだけ1行に */
+  #trouble .section-heading h2 {
+    white-space: nowrap;
+    font-size: clamp(24px, 6.4vw, 28px);
+    letter-spacing: -0.03em;
+  }
+
+  /* WHY見出し */
+  #why .section-heading h2 {
+    line-height: 1.5;
+  }
+
+  /* PRICE説明文 */
+  #price .section-heading > p:last-child {
+    line-height: 1.9;
+  }
+
+  /* 「個人サロンのための〜」を1行に */
+  .price-note strong {
+    display: block;
+    white-space: nowrap;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+  }
+
+  /* CONTACTは意図した2行で */
+  .contact-inner h2 {
+    line-height: 1.45;
+  }
+
+}
