@@ -1397,29 +1397,44 @@ footer p{
     font-size:14px;
   }
 
-}
 /* ========================================
-   NATURAL / スマホ 日本語改行 最終調整
+   NATURAL / スマホ 改行位置の確定版
 ======================================== */
 
 @media (max-width:560px){
 
-  /* HERO説明文 */
+  /* ① HERO
+     「植物の香り〜で、」で一度改行する */
+  .hero-copy br.pc{
+    display:block !important;
+  }
+
+  /* ② CONCEPT
+     HTMLで指定してある
+     「うちに」→「力が入って〜」の改行を復活 */
+  .concept-copy br{
+    display:block !important;
+  }
+
+  /* 文字サイズは一つ前の綺麗だった状態へ戻す */
   .hero-copy > p:not(.eyebrow){
-    font-size:12.5px;
-    letter-spacing:-0.02em;
+    font-size:13px;
+    letter-spacing:0;
   }
 
-  /* CONCEPT本文 */
   .concept-copy p{
-    font-size:14.5px;
-    letter-spacing:-0.025em;
+    font-size:15px;
+    letter-spacing:0;
   }
 
-  /* RESERVATION本文 */
   .contact-inner > p{
-    font-size:13.5px;
-    letter-spacing:-0.025em;
+    font-size:14px;
+    letter-spacing:0;
+  }
+
+  /* ③ 「ご相談ください。」だけは途中で割らせない */
+  .contact .no-break{
+    white-space:nowrap;
   }
 
 }
