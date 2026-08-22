@@ -1118,3 +1118,9 @@ footer p{
     white-space: nowrap;
   }
 }
+/* CONCEPT リード文 */
+.concept-copy .concept-lead {
+  font-family: "Noto Serif JP", serif;
+  font-size: 20px;
+  line-height: 2;
+}
