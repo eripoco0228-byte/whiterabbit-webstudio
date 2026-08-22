@@ -1124,3 +1124,25 @@ footer p{
   font-size: 20px;
   line-height: 2;
 }
+/* THERAPIST PROFILE PHOTO */
+
+.therapist-photo img{
+  width:100%;
+  height:560px;
+  object-fit:cover;
+  object-position:center;
+}
+
+@media(max-width:850px){
+  .therapist-photo img{
+    height:440px;
+  }
+}
+
+@media(max-width:560px){
+  .therapist-photo img{
+    height:auto;
+    aspect-ratio:4/5;
+    object-fit:cover;
+  }
+}
