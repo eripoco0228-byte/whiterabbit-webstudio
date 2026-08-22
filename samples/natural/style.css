@@ -1290,3 +1290,111 @@ footer p{
   }
 
 }
+/* ========================================
+   NATURAL / SMARTPHONE 最終調整
+======================================== */
+
+@media (max-width:560px){
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .hero-copy{
+    width:88vw;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    margin-bottom:58px;
+  }
+
+  .hero h1,
+  .hero-copy h1{
+    font-size:27px !important;
+    line-height:1.65;
+    letter-spacing:.02em;
+  }
+
+  .eyebrow{
+    font-size:10px;
+    letter-spacing:.22em;
+    white-space:nowrap;
+  }
+
+  .hero-copy > p:not(.eyebrow){
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  /* -------------------------
+     CONCEPT
+     PC用に入れた改行をスマホでは解除
+  ------------------------- */
+
+  .concept-copy br{
+    display:none;
+  }
+
+  .concept-copy p{
+    font-size:15px;
+    line-height:2.15;
+    letter-spacing:0;
+    line-break:strict;
+    word-break:normal;
+  }
+
+  .concept-copy .concept-lead{
+    font-size:17px;
+    line-height:2.05;
+  }
+
+  /* -------------------------
+     THERAPIST
+  ------------------------- */
+
+  .therapist-copy h2{
+    font-size:30px;
+    line-height:1.7;
+  }
+
+  .therapist-copy p{
+    font-size:15px;
+    line-height:2.05;
+  }
+
+  /* -------------------------
+     ACCESS
+  ------------------------- */
+
+  .access h2,
+  .access-copy h2{
+    font-size:30px;
+    line-height:1.55;
+    white-space:nowrap;
+  }
+
+  .access-copy > p{
+    font-size:14px;
+    line-height:2;
+  }
+
+  /* -------------------------
+     RESERVATION
+  ------------------------- */
+
+  .contact h2{
+    font-size:28px;
+    line-height:1.6;
+    white-space:nowrap;
+  }
+
+  .contact-inner > p{
+    font-size:14px;
+    line-height:2;
+  }
+
+  .line-btn{
+    padding:13px 20px;
+    font-size:14px;
+  }
+
+}
