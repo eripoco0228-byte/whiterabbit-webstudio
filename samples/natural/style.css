@@ -1169,3 +1169,124 @@ footer p{
   }
 
 }
+/* =========================
+   SAMPLE NAVIGATION
+========================= */
+
+.sample-navigation{
+  padding:90px 24px 80px;
+  text-align:center;
+  background:var(--ivory);
+  border-top:1px solid rgba(135,152,133,.16);
+}
+
+.sample-navigation-label{
+  margin-bottom:12px;
+  color:var(--sage);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.28em;
+}
+
+.sample-navigation h2{
+  margin-bottom:12px;
+  color:var(--brown);
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:34px;
+  font-weight:400;
+}
+
+.sample-navigation-text{
+  margin-bottom:38px;
+  color:#777;
+  font-size:13px;
+}
+
+.sample-navigation-links{
+  max-width:900px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
+}
+
+.sample-navigation-links a{
+  min-height:92px;
+  padding:20px 18px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid var(--greige);
+  background:#fff;
+
+  color:var(--brown);
+  font-size:15px;
+
+  transition:
+    transform .2s,
+    border-color .2s,
+    background .2s;
+}
+
+.sample-navigation-links a span{
+  margin-bottom:4px;
+  color:var(--sage);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.18em;
+}
+
+.sample-navigation-links a:hover{
+  transform:translateY(-2px);
+  border-color:var(--sage);
+  background:var(--sage-pale);
+}
+
+.sample-navigation-all{
+  border-color:var(--sage) !important;
+}
+
+.sample-navigation-top{
+  display:inline-block;
+  margin-top:34px;
+
+  color:var(--sage-dark);
+  font-size:11px;
+  letter-spacing:.08em;
+
+  border-bottom:1px solid var(--sage);
+  padding-bottom:3px;
+}
+
+/* smartphone */
+@media(max-width:560px){
+
+  .sample-navigation{
+    padding:70px 20px 65px;
+  }
+
+  .sample-navigation h2{
+    font-size:28px;
+  }
+
+  .sample-navigation-text{
+    margin-bottom:28px;
+  }
+
+  .sample-navigation-links{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .sample-navigation-links a{
+    min-height:76px;
+  }
+
+  .sample-navigation-top{
+    margin-top:28px;
+  }
+
+}
