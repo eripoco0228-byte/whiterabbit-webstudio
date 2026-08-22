@@ -1108,3 +1108,13 @@ footer p{
     margin-bottom:60px;
   }
 }
+/* ===== Natural HERO PC 改行調整 ===== */
+@media (min-width: 851px) {
+  .hero-copy {
+    width: min(820px, 86vw);
+  }
+
+  .hero h1 {
+    white-space: nowrap;
+  }
+}
