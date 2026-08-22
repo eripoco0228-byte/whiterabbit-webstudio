@@ -1398,3 +1398,28 @@ footer p{
   }
 
 }
+/* ========================================
+   NATURAL / スマホ 日本語改行 最終調整
+======================================== */
+
+@media (max-width:560px){
+
+  /* HERO説明文 */
+  .hero-copy > p:not(.eyebrow){
+    font-size:12.5px;
+    letter-spacing:-0.02em;
+  }
+
+  /* CONCEPT本文 */
+  .concept-copy p{
+    font-size:14.5px;
+    letter-spacing:-0.025em;
+  }
+
+  /* RESERVATION本文 */
+  .contact-inner > p{
+    font-size:13.5px;
+    letter-spacing:-0.025em;
+  }
+
+}
