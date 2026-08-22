@@ -1151,3 +1151,21 @@ footer p{
     white-space: nowrap;
   }
 }
+/* ===== THERAPIST PHOTO PC 微調整 ===== */
+@media (min-width: 851px) {
+
+  .therapist-photo {
+    height: 560px;
+    overflow: hidden;
+  }
+
+  .therapist-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.12);
+    transform-origin: center center;
+  }
+
+}
