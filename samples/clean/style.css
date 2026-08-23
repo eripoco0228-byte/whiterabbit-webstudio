@@ -843,3 +843,188 @@ nav .reserve{
     font-size: 12px;
   }
 }
+/* ==================================================
+   CLEAN / SMARTPHONE FINAL ADJUSTMENT
+================================================== */
+
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 767px) {
+
+  .sp-only {
+    display: inline;
+  }
+
+
+  /* ========================================
+     HERO
+  ======================================== */
+
+  .hero {
+    min-height: 0;
+    overflow: visible;
+    padding-bottom: 54px;
+    background: #eef4f5;
+  }
+
+  .hero-photo {
+    height: 560px;
+    min-height: 0;
+  }
+
+  .hero-panel {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+
+    width: calc(100% - 48px);
+    margin: -125px auto 0;
+    padding: 34px 28px 32px;
+
+    background: rgba(255, 255, 255, 0.70);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    z-index: 3;
+  }
+
+  .hero-panel .eyebrow {
+    margin-bottom: 24px;
+    font-size: 11px;
+    letter-spacing: .22em;
+  }
+
+  .hero-panel h1 {
+    margin-bottom: 24px;
+    font-size: 39px;
+    line-height: 1.48;
+    letter-spacing: .02em;
+    white-space: normal;
+  }
+
+  .hero-panel > p:not(.eyebrow) {
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .hero-panel .btn {
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+
+  .hero-location {
+    display: none;
+  }
+
+
+  /* ========================================
+     CONCEPT
+  ======================================== */
+
+  .concept .section-heading h2 {
+    font-size: 38px;
+    line-height: 1.5;
+    letter-spacing: .015em;
+  }
+
+  .concept-copy {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .concept-copy .lead {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
+  .concept-copy p {
+    margin-bottom: 24px;
+  }
+
+
+  /* ========================================
+     THERAPIST
+     PCの2カラムをスマホでは完全解除
+  ======================================== */
+
+  .therapist-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .therapist-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .therapist-photo {
+    width: calc(100% - 48px);
+    margin: 0 auto 48px;
+  }
+
+  .therapist-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .therapist-copy {
+    width: calc(100% - 48px);
+    max-width: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .therapist-copy h2 {
+    font-size: 38px;
+    line-height: 1.5;
+    letter-spacing: .015em;
+  }
+
+  .therapist-name {
+    margin: 32px 0 36px;
+  }
+
+  .therapist-copy > p:not(.mini):not(.therapist-name):not(.therapist-note) {
+    max-width: none;
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: .015em;
+  }
+
+  .therapist-values {
+    margin-top: 38px;
+  }
+
+  .therapist-values div {
+    padding: 18px 0;
+  }
+
+  .therapist-note {
+    margin-top: 28px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+
+  /* ========================================
+     CONTACT
+  ======================================== */
+
+  .contact-inner > p:not(.mini):not(.contact-note) {
+    line-height: 2;
+  }
+
+}
