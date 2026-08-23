@@ -47,6 +47,9 @@ h1,h2,h3,.brand strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
 .section-title.center span{font-size:13px;color:var(--muted)}
 
 .concept-grid,.beauty-grid,.access-grid,.therapist-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.concept-grid{
+  gap:60px;
+}
 .concept-photo img{aspect-ratio:4/3;object-fit:cover;border-radius:120px 18px 120px 18px}
 .concept-copy .lead{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:21px;color:var(--brown);line-height:2}
 .concept-points{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
