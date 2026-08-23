@@ -655,3 +655,31 @@ nav .reserve{
     height: 360px;
   }
 }
+/* ========================================
+   CLEAN HERO / PC 最終調整
+======================================== */
+
+@media (min-width: 901px) {
+
+  /* THERAPIST追加後もナビをゆったり収める */
+  nav {
+    gap: 24px;
+  }
+
+  /* 白いパネルを少し横長にして、
+     写真へしっかり重ねる */
+  .hero-panel {
+    left: 7vw;
+    width: min(650px, 50vw);
+    padding: 56px 60px;
+  }
+
+  /* タイトルを意図した2行に */
+  .hero h1 {
+    font-size: clamp(40px, 3.6vw, 56px);
+    line-height: 1.45;
+    letter-spacing: .03em;
+    white-space: nowrap;
+  }
+
+}
