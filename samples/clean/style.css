@@ -715,3 +715,15 @@ nav .reserve{
   }
 
 }
+/* ===== THERAPIST 本文の改行調整 ===== */
+
+.therapist-copy > p:not(.mini):not(.therapist-name):not(.therapist-note) {
+  max-width: 720px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+}
+
+/* THERAPIST右カラムを少し広げる */
+.therapist-grid {
+  grid-template-columns: 0.9fr 1.1fr;
+}
