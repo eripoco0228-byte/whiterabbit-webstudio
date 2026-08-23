@@ -69,7 +69,10 @@ h1,h2,h3,.brand strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
 
 .beauty-section{background:#fff}
 .beauty-photo img{aspect-ratio:4/5;object-fit:cover;border-radius:18px 130px 18px 130px}
-.beauty-copy h2{margin-bottom:28px}
+.beauty-copy h2{
+  margin-bottom:28px;
+  font-size:44px;
+}
 .beauty-list,.therapist-values{margin-top:32px;border-top:1px solid var(--line)}
 .beauty-list div,.therapist-values div{display:flex;align-items:center;gap:22px;padding:15px 0;border-bottom:1px solid var(--line)}
 .beauty-list strong,.therapist-values span{color:var(--pink-dark);font-size:11px;letter-spacing:.12em}
