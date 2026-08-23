@@ -727,3 +727,6 @@ nav .reserve{
 .therapist-grid {
   grid-template-columns: 0.9fr 1.1fr;
 }
+.nowrap {
+  white-space: nowrap;
+}
