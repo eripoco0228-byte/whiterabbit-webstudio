@@ -1028,3 +1028,183 @@ nav .reserve{
   }
 
 }
+/* ==================================================
+   CLEAN / SMARTPHONE FINAL FIX
+   ※ このCSSをファイルの一番最後に追加
+================================================== */
+
+@media (max-width: 767px) {
+
+  /* ========================================
+     1. HERO
+     スケルトン感を残しつつ全体バランス調整
+  ======================================== */
+
+  .hero {
+    min-height: 0;
+    overflow: visible;
+    padding-bottom: 50px;
+    background: #eef4f5;
+  }
+
+  .hero-photo {
+    height: 520px;
+    min-height: 0;
+  }
+
+  .hero-panel {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+
+    width: calc(100% - 40px);
+    margin: -105px auto 0;
+    padding: 30px 26px 30px;
+
+    background: rgba(255, 255, 255, 0.70);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    z-index: 3;
+  }
+
+  .hero-panel .eyebrow {
+    margin-bottom: 22px;
+    font-size: 10px;
+    letter-spacing: .20em;
+  }
+
+  .hero-panel h1,
+  .hero h1 {
+    margin-bottom: 22px;
+    font-size: 32px;
+    line-height: 1.55;
+    letter-spacing: .01em;
+    white-space: normal;
+  }
+
+  .hero-panel > p:not(.eyebrow) {
+    margin-bottom: 26px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .hero-panel .btn {
+    min-width: 0;
+    padding: 14px 22px;
+    font-size: 13px;
+  }
+
+
+  /* ========================================
+     2. CONCEPT
+     見出しと本文をスマホ向けに整える
+  ======================================== */
+
+  .concept .section-heading h2 {
+    font-size: 32px;
+    line-height: 1.55;
+    letter-spacing: .01em;
+  }
+
+  .concept-copy {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .concept-copy .lead {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+
+  /* ========================================
+     3. MENU
+     本文の横幅を少しだけ確保
+  ======================================== */
+
+  .menu-card {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .menu-card > p:last-child {
+    font-size: 13px;
+    line-height: 2;
+    letter-spacing: 0;
+  }
+
+
+  /* ========================================
+     4. THERAPIST
+     写真下の大きすぎる余白を解消
+  ======================================== */
+
+  .therapist-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .therapist-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .therapist-photo {
+    width: calc(100% - 48px);
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 auto 28px !important;
+  }
+
+  .therapist-photo img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    object-fit: cover;
+  }
+
+  .therapist-copy {
+    width: calc(100% - 48px);
+    max-width: none;
+    margin: 0 auto !important;
+    padding: 0;
+  }
+
+  .therapist-copy .mini {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .therapist-copy h2 {
+    font-size: 34px;
+    line-height: 1.5;
+    letter-spacing: .01em;
+  }
+
+  .therapist-copy > p:not(.mini):not(.therapist-name):not(.therapist-note) {
+    max-width: none;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 0;
+  }
+
+
+  /* ========================================
+     5. nowrap
+     指定した言葉を途中で分割させない
+  ======================================== */
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+}
