@@ -698,13 +698,13 @@ nav .reserve{
   }
 
   .hero-panel {
-    left: 4.5vw;
+    left: 4.0vw;
     top: 44%;
     width: min(650px, 50vw);
     padding: 44px 56px;
 
     /* スケルトン感を強める */
-    background: rgba(255, 255, 255, 0.68);
+    background: rgba(255, 255, 255, 0.60);
   }
 
   .hero h1 {
