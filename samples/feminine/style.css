@@ -54,6 +54,9 @@ h1,h2,h3,.brand strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
 .concept-copy .lead{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:21px;color:var(--brown);line-height:2}
 .concept-points{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .concept-points span{padding:8px 15px;border:1px solid var(--greige);border-radius:999px;font-size:11px}
+.sp-only{
+  display:none;
+}
 
 .menu-section{background:linear-gradient(180deg,var(--pink-pale),#fdf8f6)}
 .menu-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -931,7 +934,9 @@ body {
 
 
   /* ---------- CONCEPT ---------- */
-
+.sp-only{
+  display:inline;
+}
   .concept-grid {
     grid-template-columns: 1fr;
     gap: 34px;
