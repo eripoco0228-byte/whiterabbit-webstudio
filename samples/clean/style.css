@@ -683,3 +683,31 @@ nav .reserve{
   }
 
 }
+/* ========================================
+   CLEAN HERO / PC 最終調整
+======================================== */
+
+@media (min-width: 901px) {
+
+  nav {
+    gap: 24px;
+  }
+
+  .hero-panel {
+    left: 7vw;
+    top: 46%;
+    width: min(650px, 50vw);
+    padding: 46px 56px;
+
+    /* 白いパネルをほんのり透かす */
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 3.6vw, 56px);
+    line-height: 1.42;
+    letter-spacing: .03em;
+    white-space: nowrap;
+  }
+
+}
