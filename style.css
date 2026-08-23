@@ -286,9 +286,11 @@ footer{
   section{scroll-margin-top:75px}.mobile-menu{top:74px}
   .hero{min-height:760px}
   .hero-bg{
-    /* スマホはキャンドルとグリーンが入るよう、中心を少し右へ */
-    background-position:62% 48%;
-  }
+  background-image:url("DSC04399-mobile.png");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
   .hero-overlay{background:linear-gradient(180deg,rgba(35,39,38,.48),rgba(28,31,30,.67))}
   .hero-content{width:88vw;padding:80px 0 65px}
   .hero h1{font-size:38px}
