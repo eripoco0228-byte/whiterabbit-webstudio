@@ -822,3 +822,21 @@ br.sp-only {
     display: block;
   }
 }
+/* =========================================================
+   v6 SALES PAGE UPDATE
+========================================================= */
+.hero-facts{display:flex;align-items:center;gap:0;margin-top:28px;flex-wrap:wrap;font-size:15px;font-weight:800;text-shadow:none}
+.hero-facts>*{padding:4px 18px;border-right:1px solid rgba(255,255,255,.55)}
+.hero-facts>*:first-child{padding-left:0}.hero-facts>*:last-child{border-right:0}
+.feature-strip{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;padding:18px clamp(20px,5vw,70px);background:var(--paper);border-bottom:1px solid var(--line);font-size:12px;font-weight:800;color:var(--heading)}
+.trouble-grid-five{grid-template-columns:repeat(5,1fr);max-width:1280px}.trouble-grid-five .trouble-card{padding:30px 23px}.trouble-grid-five .trouble-card h3{font-size:17px}
+.trouble-answer{max-width:820px;margin:42px auto 0;text-align:center;color:var(--heading);font-size:18px;font-weight:800}
+.design-emphasis{font-weight:800;color:var(--heading);margin-top:14px!important}.design-caption{text-align:center;font-size:11px;margin:20px auto 0;color:#888}
+.sample-custom-note strong{display:block;color:var(--heading);font-size:18px;margin-bottom:8px}.sample-custom-note small{display:block;margin-top:10px;font-size:10px;opacity:.75}
+.price-grid-single{grid-template-columns:minmax(0,720px)}.price-grid-single .price-card{padding:52px}.monthly-zero{display:inline-block;padding:7px 16px;border-radius:999px;background:var(--beige);color:var(--heading);font-weight:700;margin-bottom:12px}.monthly-zero strong{color:var(--accent-dark)}
+.included-title{margin:24px 0 4px;color:var(--heading);font-size:17px;font-weight:800}.aftercare-box{margin-top:28px;padding:24px;border-radius:16px;background:var(--beige);border:1px solid var(--line)}.aftercare-box>strong{display:block;color:var(--heading);font-size:16px}.aftercare-box>span{display:block;color:var(--accent-dark);font-size:23px;font-weight:900;margin:5px 0 8px}.aftercare-box p{margin-bottom:6px}.aftercare-box small{font-size:10px;opacity:.78}
+.extra-costs{max-width:1000px;margin:34px auto 0}.extra-costs h3{text-align:center;color:var(--heading);font-size:20px}.extra-cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.extra-cost-grid>div{padding:22px;background:var(--paper);border:1px solid var(--line);border-radius:16px}.extra-cost-grid strong{color:var(--heading);font-size:14px}.extra-cost-grid p{font-size:12px;margin:7px 0 0}
+.price-note small{display:block;margin-top:10px;font-size:10px;opacity:.75}.process-note{max-width:760px;margin:5px auto 0;text-align:center;font-size:11px;opacity:.8}
+.contact-actions{display:flex;flex-direction:column;align-items:center;margin-top:28px}.apply-button{display:inline-flex;align-items:center;justify-content:center;min-width:360px;padding:17px 30px;border-radius:999px;background:#fff;color:#426a70;font-weight:900;box-shadow:0 15px 35px rgba(0,0,0,.12);transition:.2s}.apply-button:hover{transform:translateY(-3px)}.apply-note{font-size:11px!important;line-height:1.75!important;margin:12px 0 4px!important;opacity:.9}.apply-note strong{color:#fff}.contact-actions .line-button{margin-top:22px}.footer-links{display:flex;gap:22px;align-items:center}.footer-links a:hover{text-decoration:underline}
+@media(max-width:1100px){.trouble-grid-five{grid-template-columns:repeat(2,1fr)}.trouble-grid-five .trouble-card:last-child{grid-column:1/-1;max-width:540px;width:100%;justify-self:center}}
+@media(max-width:680px){.hero{min-height:820px}.hero-facts{font-size:12px;margin-top:22px;gap:8px}.hero-facts>*{padding:3px 10px}.hero-facts>*:first-child{padding-left:0}.feature-strip{justify-content:flex-start;gap:8px 16px;padding:15px 18px;font-size:10px}.trouble-grid-five{grid-template-columns:1fr}.trouble-grid-five .trouble-card:last-child{grid-column:auto;max-width:none}.trouble-answer{font-size:15px;line-height:1.8;margin-top:32px}.price-grid-single .price-card{padding:36px 24px}.extra-cost-grid{grid-template-columns:1fr}.aftercare-box{padding:20px}.apply-button{min-width:0;width:min(100%,360px);font-size:14px;padding:15px 18px}.footer-links{flex-direction:column;gap:4px;margin-top:12px}.process-note{font-size:10px;line-height:1.8}.sample-custom-note strong{font-size:15px}}
