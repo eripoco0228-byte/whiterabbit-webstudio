@@ -864,3 +864,7 @@ br.sp-only {
 }.apply-button:hover{transform:translateY(-3px)}.apply-note{font-size:11px!important;line-height:1.75!important;margin:12px 0 4px!important;opacity:.9}.apply-note strong{color:#fff}.contact-actions .line-button{margin-top:22px}.footer-links{display:flex;gap:22px;align-items:center}.footer-links a:hover{text-decoration:underline}
 @media(max-width:1100px){.trouble-grid-five{grid-template-columns:repeat(2,1fr)}.trouble-grid-five .trouble-card:last-child{grid-column:1/-1;max-width:540px;width:100%;justify-self:center}}
 @media(max-width:680px){.hero{min-height:820px}.hero-facts{font-size:12px;margin-top:22px;gap:8px}.hero-facts>*{padding:3px 10px}.hero-facts>*:first-child{padding-left:0}.feature-strip{justify-content:flex-start;gap:8px 16px;padding:15px 18px;font-size:10px}.trouble-grid-five{grid-template-columns:1fr}.trouble-grid-five .trouble-card:last-child{grid-column:auto;max-width:none}.trouble-answer{font-size:15px;line-height:1.8;margin-top:32px}.price-grid-single .price-card{padding:36px 24px}.extra-cost-grid{grid-template-columns:1fr}.aftercare-box{padding:20px}.apply-button{min-width:0;width:min(100%,360px);font-size:14px;padding:15px 18px}.footer-links{flex-direction:column;gap:4px;margin-top:12px}.process-note{font-size:10px;line-height:1.8}.sample-custom-note strong{font-size:15px}}
+/* ブランド名を途中で分割しない */
+.brand-nowrap{
+  white-space:nowrap;
+}
