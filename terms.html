@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WEBサイト制作サービス 利用規約 | white rabbit WEB STUDIO</title>
+
+  <meta
+    name="description"
+    content="white rabbit WEB STUDIOが提供するWEBサイト制作サービスの利用規約です。"
+  >
+
+  <style>
+    :root {
+      --bg: #f8f6f1;
+      --paper: #ffffff;
+      --blue: #bad6d9;
+      --blue-dark: #70a9b5;
+      --text: #4d4d4d;
+      --subtext: #727272;
+      --line: #e7e4de;
+      --beige: #f2eee7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Yu Gothic",
+        YuGothic,
+        Meiryo,
+        sans-serif;
+      line-height: 1.9;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+      display: inline-flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-main {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-sub {
+      margin-top: 4px;
+      color: var(--blue-dark);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    .back-link {
+      color: var(--subtext);
+      font-size: 13px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .hero {
+      padding: 74px 20px 66px;
+      text-align: center;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(186, 214, 217, 0.46) 0%,
+          rgba(248, 246, 241, 0) 100%
+        );
+    }
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--blue-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(25px, 4vw, 38px);
+      line-height: 1.45;
+      letter-spacing: 0.05em;
+    }
+
+    .version {
+      margin: 15px 0 0;
+      color: var(--subtext);
+      font-size: 13px;
+    }
+
+    main {
+      width: min(860px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 0 0 90px;
+    }
+
+    .terms-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 50px 56px;
+      box-shadow: 0 8px 30px rgba(80, 80, 80, 0.04);
+    }
+
+    .intro {
+      margin: 0 0 46px;
+      padding-bottom: 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .terms-section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .terms-section:last-of-type {
+      border-bottom: 0;
+    }
+
+    .terms-section h2 {
+      margin: 0 0 22px;
+      padding-left: 14px;
+      border-left: 4px solid var(--blue);
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .terms-section p {
+      margin: 0 0 14px;
+    }
+
+    .terms-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 1.55em;
+    }
+
+    ol li {
+      margin-bottom: 10px;
+      padding-left: 0.3em;
+    }
+
+    ul {
+      margin: 16px 0;
+      padding-left: 1.5em;
+    }
+
+    ul li {
+      margin-bottom: 7px;
+    }
+
+    strong {
+      color: #3f646b;
+    }
+
+    .note-box {
+      margin-top: 18px;
+      padding: 20px 22px;
+      background: var(--beige);
+      border-radius: 12px;
+    }
+
+    .established {
+      margin-top: 46px;
+      padding: 28px;
+      background: var(--beige);
+      border-radius: 14px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--subtext);
+    }
+
+    .established strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .bottom-link {
+      margin-top: 38px;
+      text-align: center;
+    }
+
+    .bottom-link a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 26px;
+      border: 1px solid var(--blue-dark);
+      border-radius: 999px;
+      color: var(--blue-dark);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .bottom-link a:hover {
+      background: var(--blue-dark);
+      color: #fff;
+    }
+
+    footer {
+      padding: 36px 20px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+      text-align: center;
+      color: var(--subtext);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 680px) {
+      .header-inner {
+        width: min(100% - 28px, 1100px);
+        min-height: 68px;
+      }
+
+      .brand-main {
+        font-size: 14px;
+      }
+
+      .brand-sub {
+        font-size: 9px;
+      }
+
+      .back-link {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 54px 18px 50px;
+      }
+
+      main {
+        width: min(100% - 24px, 860px);
+        padding-bottom: 60px;
+      }
+
+      .terms-card {
+        padding: 34px 22px;
+        border-radius: 17px;
+      }
+
+      .intro {
+        margin-bottom: 28px;
+        padding-bottom: 28px;
+      }
+
+      .terms-section {
+        padding: 28px 0;
+      }
+
+      .terms-section h2 {
+        font-size: 17px;
+      }
+
+      body {
+        font-size: 14px;
+        line-height: 1.85;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-main">white rabbit</span>
+        <span class="brand-sub">WEB STUDIO</span>
+      </a>
+
+      <a href="index.html" class="back-link">
+        ← WEB制作ページへ戻る
+      </a>
+
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <p class="eyebrow">TERMS OF SERVICE</p>
+
+    <h1>
+      WEBサイト制作サービス<br>
+      利用規約
+    </h1>
+
+    <p class="version">
+      white rabbit WEB STUDIO ｜ Ver.1.0
+    </p>
+  </section>
+
+
+  <main>
+
+    <article class="terms-card">
+
+      <div class="intro">
+        <p>
+          本利用規約（以下「本規約」といいます。）は、
+          spaceHIRO white rabbit（以下「当方」といいます。）が提供する
+          「white rabbit WEB STUDIO」WEBサイト制作サービス
+          （以下「本サービス」といいます。）の利用条件を定めるものです。
+        </p>
+
+        <p>
+          本サービスをお申し込みいただく前に、本規約をご確認ください。
+        </p>
+      </div>
+
+
+      <section class="terms-section">
+        <h2>第1条｜本サービスの内容</h2>
+
+        <ol>
+          <li>
+            本サービスは、個人サロン等を対象とした1ページ型WEBサイトの制作サービスです。
+          </li>
+
+          <li>
+            お客様には、当方が用意するベースデザインからご希望のデザインをお選びいただき、
+            ヒアリング内容、写真、ロゴ、メニューその他ご提供いただいた情報をもとに制作します。
+          </li>
+
+          <li>
+            ベースデザインの色味、写真、文章等は、
+            お客様のサロンイメージに合わせて調整します。
+          </li>
+
+          <li>
+            本サービスには、原則として以下の内容が含まれます。
+
+            <ul>
+              <li>1ページ型WEBサイト制作</li>
+              <li>PC・スマートフォン表示対応</li>
+              <li>公式LINE、Instagram、外部予約サイト等へのリンク設置</li>
+              <li>必要に応じたアクセス情報の掲載</li>
+              <li>基本的なSEO設定</li>
+              <li>SSL（https）対応</li>
+              <li>独自ドメインの初回接続サポート</li>
+              <li>WEBサイト公開に必要な初期設定サポート</li>
+              <li>公開前の表示・リンク確認</li>
+              <li>初稿提出後2回までの修正</li>
+              <li>公開後7日間の軽微な修正サポート</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第2条｜基本料金</h2>
+
+        <ol>
+          <li>
+            本サービスの基本制作料金は、
+            <strong>39,800円（税込）</strong>です。
+          </li>
+
+          <li>
+            本サービスは買い切り型の制作サービスであり、
+            当方への月額管理費は発生しません。
+          </li>
+
+          <li>
+            独自ドメインの取得・更新費用、銀行振込手数料その他
+            お客様が任意で利用する外部サービスの料金は、
+            基本制作料金には含まれません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第3条｜基本料金に含まれないもの</h2>
+
+        <p>次の内容は、基本制作料金には含まれません。</p>
+
+        <ul>
+          <li>ロゴの新規制作</li>
+          <li>写真撮影</li>
+          <li>予約システムそのものの構築</li>
+          <li>EC・オンライン決済機能</li>
+          <li>会員機能</li>
+          <li>公式LINEアカウントの開設・詳細設定・運用</li>
+          <li>Instagramその他SNSの開設・運用</li>
+          <li>Googleビジネスプロフィールの開設・設定・運用</li>
+          <li>外部予約サービス等の開設・設定・運用</li>
+          <li>本サービスの基本仕様を超える機能・ページ・セクション等の追加</li>
+          <li>公開後7日を経過した後の継続的な更新・保守</li>
+          <li>
+            お客様のWEBサイトにおける利用規約、
+            プライバシーポリシー、特定商取引法に基づく表記その他法的表示についての
+            要否判断、法律相談、法的審査および原稿作成
+          </li>
+        </ul>
+
+        <p>
+          前項に該当するご希望については、
+          対応の可否および追加料金等を個別にご案内する場合があります。
+        </p>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第4条｜お申し込み・契約の成立</h2>
+
+        <ol>
+          <li>
+            お客様は、当方所定の申込・ヒアリングフォームに必要事項を入力し、
+            本規約に同意のうえお申し込みください。
+          </li>
+
+          <li>
+            <strong>
+              申込・ヒアリングフォームを送信しただけでは、
+              お支払いは発生しません。
+            </strong>
+          </li>
+
+          <li>
+            当方は、お申し込み内容、制作内容および
+            ご提供いただいた情報等を確認します。
+          </li>
+
+          <li>
+            当方が制作可能と判断し、
+            お客様へ制作を受け付ける旨を通知した時点で、
+            本サービスに関する契約が成立するものとします。
+          </li>
+
+          <li>
+            制作内容が本サービスの範囲を超える場合その他
+            当方が対応困難と判断した場合は、
+            お申し込みをお受けできないことがあります。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第5条｜お支払い</h2>
+
+        <ol>
+          <li>制作料金は全額前払いとします。</li>
+
+          <li>
+            お支払い方法は、銀行振込または
+            当方指定のクレジットカード決済とします。
+          </li>
+
+          <li>
+            お支払い期限は、当方がお支払い方法をご案内した日から
+            <strong>7日以内</strong>とします。
+          </li>
+
+          <li>
+            銀行振込にかかる振込手数料は、
+            お客様のご負担となります。
+          </li>
+
+          <li>
+            期限内のお支払いが難しい場合は、
+            事前にご相談ください。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第6条｜制作開始</h2>
+
+        <ol>
+          <li>
+            必要な情報・素材および制作料金の入金を当方が確認した後、
+            制作開始予定をご案内します。
+          </li>
+
+          <li>
+            <strong>
+              当方がお客様へ「制作を開始いたします」と通知した時点を
+              制作開始とします。
+            </strong>
+          </li>
+
+          <li>
+            制作期間は、前項の制作開始日を基準として算定します。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第7条｜制作期間</h2>
+
+        <ol>
+          <li>
+            制作開始後、通常
+            <strong>7〜14日程度を目安に初稿</strong>
+            をご案内します。
+          </li>
+
+          <li>
+            制作期間は目安であり、お申し込み状況、制作内容、
+            外部サービスの設定・反映状況その他の事情により
+            前後する場合があります。
+          </li>
+
+          <li>
+            お客様による素材提出、内容確認、修正指示その他の
+            ご連絡に要した期間は、制作期間に含まれません。
+          </li>
+
+          <li>
+            「最短7日」等の表示は、必要な情報・素材が揃い、
+            お客様からの確認・返信等が円滑に行われた場合の目安であり、
+            7日以内の初稿提出または公開を保証するものではありません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第8条｜文章・写真・その他素材</h2>
+
+        <ol>
+          <li>
+            お客様は、制作に必要な情報および素材を
+            当方が指定する方法でご提供ください。
+          </li>
+
+          <li>
+            お客様からご提供いただいた文章については、
+            内容の趣旨を変えない範囲で、
+            WEBサイトに適した表現へ編集・調整する場合があります。
+          </li>
+
+          <li>
+            お客様は、ご提供いただく写真、画像、ロゴ、文章その他の素材について、
+            自ら使用する権利を有していることを保証するものとします。
+          </li>
+
+          <li>
+            第三者の著作権、肖像権、商標権その他の権利を侵害する素材を
+            提供してはなりません。
+          </li>
+
+          <li>
+            お客様から提供された素材に起因する第三者とのトラブルについて、
+            当方の責めに帰すべき事由がない限り、
+            当方は責任を負いません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第9条｜掲載内容および広告表現</h2>
+
+        <ol>
+          <li>
+            お客様は、WEBサイトに掲載するサービス内容、施術内容、料金、
+            資格、経歴、実績、商品情報、効能・効果その他の情報について、
+            真実かつ正確な情報を当方へ提供するものとします。
+          </li>
+
+          <li>
+            お客様は、掲載を希望する内容について、景品表示法、
+            医薬品医療機器等法（薬機法）その他お客様の事業・サービスに
+            適用される法令、ガイドライン等を遵守するものとします。
+          </li>
+
+          <li>
+            当方は、お客様から提供された情報をもとに、
+            WEBサイトに適した文章への編集、表現の調整および
+            キャッチコピー等の提案を行うことがあります。
+          </li>
+
+          <li>
+            当方が法令上問題となる可能性があると判断した表現については、
+            掲載をお断りし、または表現の変更をお願いすることがあります。
+          </li>
+
+          <li>
+            本サービスには、法律相談、法的審査、
+            広告表現の適法性の保証その他これらに類する専門サービスは含まれません。
+            お客様は、必要に応じて行政機関、弁護士その他の専門家へ
+            確認するものとします。
+          </li>
+
+          <li>
+            お客様から提供された情報またはお客様の指示に基づく掲載内容に起因して、
+            第三者との紛争、行政上の指摘その他の問題が生じた場合、
+            当方の責めに帰すべき事由がある場合を除き、
+            当方は責任を負いません。
+          </li>
+
+          <li>
+            お客様のWEBサイトにおいて、利用規約、プライバシーポリシー、
+            特定商取引法に基づく表記その他の法的表示が必要となる場合、
+            その要否および内容についてはお客様ご自身で確認するものとします。
+            当方は、お客様から完成した原稿をご提供いただいた場合、
+            その掲載作業を行うことができますが、
+            本サービスにはこれらの法的表示の要否判断、法律相談、
+            法的審査または原稿作成は含まれません。
+            必要に応じて行政機関、弁護士その他の専門家へご確認ください。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第10条｜修正</h2>
+
+        <ol>
+          <li>
+            基本制作料金には、
+            <strong>初稿提出後2回までの修正</strong>
+            が含まれます。
+          </li>
+
+          <li>
+            「1回の修正」とは、お客様が一度にまとめてご連絡いただいた
+            修正内容一式をいいます。
+            複数箇所の修正をまとめてご依頼いただくことができます。
+          </li>
+
+          <li>
+            ベースデザインの変更、サイト構成の大幅な変更、
+            掲載内容の全面的な変更その他初稿を大きく作り直す内容は、
+            通常の修正には含まれません。
+          </li>
+
+          <li>
+            前項に該当する場合、別途料金をご案内するか、
+            対応をお断りする場合があります。
+          </li>
+
+          <li>
+            3回目以降の修正についても、
+            内容に応じて別途料金が発生する場合があります。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第11条｜最終確認・公開・納品</h2>
+
+        <ol>
+          <li>
+            修正完了後、お客様にWEBサイトの最終確認をお願いします。
+          </li>
+
+          <li>
+            お客様は、サービス内容、料金、資格、施術内容、
+            その他WEBサイトに掲載された情報に誤りがないことをご確認ください。
+          </li>
+
+          <li>
+            お客様から公開の承諾をいただいた後、
+            当方所定の方法でWEBサイトを公開します。
+          </li>
+
+          <li>
+            <strong>
+              WEBサイトが公開され、お客様が閲覧できる状態になった時点を、
+              本サービスにおける納品完了とします。
+            </strong>
+          </li>
+
+          <li>
+            お客様による最終確認・公開承諾後に判明した内容上の誤りについては、
+            第12条に定める軽微な修正を除き、
+            追加対応となる場合があります。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第12条｜公開後7日間のサポート</h2>
+
+        <p>
+          WEBサイト公開日から7日間は、
+          次のような軽微な修正に無料で対応します。
+        </p>
+
+        <ul>
+          <li>誤字・脱字</li>
+          <li>営業時間等の軽微な情報修正</li>
+          <li>URL・リンクの誤り</li>
+          <li>その他当方が軽微と判断する修正</li>
+        </ul>
+
+        <p>
+          写真の大幅な差し替え、文章の全面的な書き換え、
+          メニューの大幅な追加、デザイン変更、
+          ページ・セクション・機能の追加等は
+          無料サポートの対象外とします。
+        </p>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第13条｜公開後の更新</h2>
+
+        <ol>
+          <li>
+            公開日から8日目以降の軽微な更新は、
+            <strong>1回3,300円（税込）</strong>で承ります。
+          </li>
+
+          <li>
+            「軽微な更新」とは、お客様から変更後の文章、画像その他必要な素材を
+            ご提供いただき、既存WEBサイト内の情報を変更・差し替えする作業のうち、
+            当方が概ね30分以内で対応可能と判断するものをいいます。
+          </li>
+
+          <li>
+            複数の軽微な変更は、
+            一度にまとめてご依頼いただくことができます。
+          </li>
+
+          <li>
+            新しいページ・セクション・機能の追加、
+            大幅なレイアウト・デザイン変更、文章の新規作成、
+            大量の情報追加、画像制作その他軽微な更新の範囲を超える作業については、
+            別途お見積りとなります。
+          </li>
+
+          <li>
+            本サービスには、
+            月額の継続的な更新・保守契約は含まれません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第14条｜キャンセル・返金</h2>
+
+        <ol>
+          <li>
+            お支払い前のキャンセルについて、
+            キャンセル料は発生しません。
+          </li>
+
+          <li>
+            お支払い後、当方から制作開始通知を行う前に
+            お客様都合でキャンセルされた場合は、
+            原則として制作料金を返金します。
+          </li>
+
+          <li>
+            前項の返金に振込手数料その他の実費が発生する場合は、
+            お客様のご負担とします。
+          </li>
+
+          <li>
+            <strong>
+              制作開始通知後は、サービスの性質上、
+              お客様都合によるキャンセルおよび返金は
+              原則としてお受けできません。
+            </strong>
+          </li>
+
+          <li>
+            当方の事情により制作を継続できず、
+            WEBサイトを納品できない場合は、
+            原則としてお支払いいただいた制作料金を返金します。
+          </li>
+
+          <li>
+            本条は、法令によりお客様に認められる権利を
+            制限するものではありません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第15条｜お客様からのご連絡がない場合</h2>
+
+        <ol>
+          <li>
+            制作に必要な確認、素材、修正内容その他について
+            当方からご連絡した後、
+            <strong>30日以上お客様からご連絡がない場合</strong>、
+            当方は制作を一旦終了または休止することができます。
+          </li>
+
+          <li>
+            前項の場合、当初ご案内した制作期間・納期等は適用されません。
+          </li>
+
+          <li>
+            制作再開をご希望の場合、
+            制作状況等により別途費用が発生する場合があります。
+          </li>
+
+          <li>
+            制作開始後に前項の状態となった場合、
+            既にお支払いいただいた制作料金は原則として返金いたしません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第16条｜ドメイン・公開環境・アカウント</h2>
+
+        <ol>
+          <li>
+            WEBサイトの公開には、
+            当方が指定または推奨する第三者の外部サービスを
+            利用する場合があります。
+          </li>
+
+          <li>
+            独自ドメインを利用する場合、
+            原則としてお客様ご自身の名義・アカウントで
+            取得していただきます。
+          </li>
+
+          <li>
+            独自ドメインの取得費用・更新費用は、
+            お客様のご負担となります。
+          </li>
+
+          <li>
+            独自ドメインの初回接続作業は、
+            基本制作料金に含まれます。
+          </li>
+
+          <li>
+            WEBサイト公開に必要な外部サービスのアカウントについても、
+            原則としてお客様ご自身の名義・アカウントで作成していただきます。
+            必要な場合は、当方が登録手順をご案内します。
+          </li>
+
+          <li>
+            当方は、お客様のパスワードその他のログイン情報を
+            原則として保管しません。
+            制作・公開作業に必要な場合は、各サービスが提供する共同作業者、
+            メンバーその他の権限付与機能を利用する場合があります。
+          </li>
+
+          <li>
+            納品後、お客様は当方に付与したアクセス権限を
+            解除することができます。
+          </li>
+
+          <li>
+            本サービスには、納品後の恒久的なサーバー、
+            アカウントまたは独自ドメインの管理は含まれません。
+          </li>
+
+          <li>
+            本サービスでは、現行の外部サービスの仕様上、
+            原則として当方への月額管理費および別途レンタルサーバー料金を
+            必要としない方法でWEBサイトを公開します。
+            ただし、将来にわたり外部サービスを
+            無料で利用できることを保証するものではありません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第17条｜外部サービス</h2>
+
+        <ol>
+          <li>
+            GitHub、Cloudflare、LINE、Instagram、Google、予約サイト、
+            ドメイン事業者その他第三者が提供するサービスの料金、
+            仕様、利用条件等が変更された場合、
+            WEBサイトの公開・維持に追加費用または
+            追加手続き等が必要となる場合があります。
+          </li>
+
+          <li>
+            第三者サービスの仕様変更、障害、停止、終了、
+            アカウント制限その他当方の管理外で発生した事象について、
+            当方の責めに帰すべき事由がない限り、
+            当方は責任を負いません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第18条｜SEO・集客等</h2>
+
+        <ol>
+          <li>
+            本サービスには、ページタイトル、description、
+            見出し構造、画像alt等、
+            制作時に実施可能な基本的なSEO設定を含みます。
+          </li>
+
+          <li>
+            検索エンジンへの掲載順位、検索結果への表示、
+            アクセス数、問い合わせ数、予約数、売上その他の成果を
+            保証するものではありません。
+          </li>
+
+          <li>
+            Googleその他検索エンジンの仕様変更等による
+            検索順位の変動について、当方は責任を負いません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第19条｜著作権等</h2>
+
+        <ol>
+          <li>
+            お客様から提供された写真、文章、ロゴその他の素材に関する権利は、
+            それぞれの権利者に帰属します。
+          </li>
+
+          <li>
+            制作料金の全額支払いおよび納品完了後、
+            お客様は完成したWEBサイトを
+            自己の事業のために利用することができます。
+          </li>
+
+          <li>
+            本サービスで使用する汎用的なHTML、CSS、JavaScript、
+            テンプレート、デザイン構造、制作手法、ノウハウその他
+            当方が従前から保有するもの、または汎用的に利用可能なものについては、
+            当方が引き続き使用することができます。
+          </li>
+
+          <li>
+            本サービスのベースデザインは、
+            お客様専用の独占デザインではなく、
+            他のお客様のWEBサイト制作にも使用する場合があります。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第20条｜制作実績としての掲載</h2>
+
+        <p>
+          当方は、お客様の許可を得た場合に限り、
+          完成したWEBサイトの画像、サロン名その他お客様が許可した情報を、
+          当方WEBサイト、SNSその他の媒体に
+          制作実績として掲載することがあります。
+        </p>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第21条｜禁止事項</h2>
+
+        <p>
+          お客様は、本サービスの利用にあたり、
+          次の行為を行ってはなりません。
+        </p>
+
+        <ul>
+          <li>法令または公序良俗に反する内容の掲載を依頼する行為</li>
+          <li>第三者の著作権、肖像権、商標権その他の権利を侵害する素材を提供する行為</li>
+          <li>虚偽または誤解を招く情報を掲載するよう依頼する行為</li>
+          <li>当方または第三者に不利益・損害を与える行為</li>
+          <li>本サービスまたは当方の運営を妨害する行為</li>
+          <li>その他当方が不適切と判断する行為</li>
+        </ul>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第22条｜免責・責任</h2>
+
+        <ol>
+          <li>
+            当方は、天災、通信障害、第三者サービスの障害その他
+            当方の合理的な管理を超える事由により、
+            本サービスの提供に遅延または支障が生じた場合、
+            その責任を負わないものとします。
+            ただし、当方の責めに帰すべき事由がある場合を除きます。
+          </li>
+
+          <li>
+            当方は、本サービスに関連してお客様に損害が生じた場合であっても、
+            当方の責めに帰すことのできない事由によって生じた損害について
+            責任を負いません。
+          </li>
+
+          <li>
+            本条その他本規約の規定は、
+            当方の故意または重大な過失による責任その他、
+            法令上免責または制限することのできない責任を
+            免除するものではありません。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第23条｜個人情報の取扱い</h2>
+
+        <ol>
+          <li>
+            当方は、本サービスのお申し込み、制作、連絡、
+            サポートその他本サービスの提供に必要な範囲で、
+            お客様から氏名、メールアドレスその他の情報を
+            ご提供いただく場合があります。
+          </li>
+
+          <li>
+            当方は、ご提供いただいた個人情報を、
+            本サービスの提供、連絡、本人確認、料金の請求その他
+            これらに付随する目的のために利用し、
+            法令に基づく場合その他正当な理由がある場合を除き、
+            ご本人の同意なく目的の範囲を超えて利用しません。
+          </li>
+
+          <li>
+            当方は、法令に基づく場合を除き、
+            ご本人の同意なく個人情報を第三者へ提供しません。
+          </li>
+
+          <li>
+            外部サービスを利用して本サービスを提供する場合、
+            サービス提供に必要な範囲で情報が
+            当該外部サービス上で取り扱われることがあります。
+          </li>
+        </ol>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第24条｜本規約の変更</h2>
+
+        <p>
+          当方は、法令の変更、本サービス内容の変更その他必要がある場合、
+          本規約を変更することがあります。
+        </p>
+
+        <p>
+          変更後の規約は、当方WEBサイトへの掲載その他
+          適切な方法によりお知らせします。
+        </p>
+      </section>
+
+
+      <section class="terms-section">
+        <h2>第25条｜協議</h2>
+
+        <p>
+          本規約に定めのない事項または本規約の解釈について
+          疑義が生じた場合、お客様と当方は誠意をもって協議し、
+          解決を図るものとします。
+        </p>
+      </section>
+
+
+      <div class="established">
+        制定日：2026年8月30日
+
+        <strong>
+          spaceHIRO white rabbit<br>
+          white rabbit WEB STUDIO
+        </strong>
+      </div>
+
+
+      <div class="bottom-link">
+        <a href="index.html">
+          ← WEB制作ページへ戻る
+        </a>
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <footer>
+    © white rabbit WEB STUDIO
+  </footer>
+
+</body>
+</html>
