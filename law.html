@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>特定商取引法に基づく表記 | white rabbit WEB STUDIO</title>
+
+  <meta
+    name="description"
+    content="white rabbit WEB STUDIOの特定商取引法に基づく表記です。"
+  >
+
+  <style>
+    :root {
+      --bg: #f8f6f1;
+      --paper: #ffffff;
+      --blue: #bad6d9;
+      --blue-dark: #70a9b5;
+      --text: #4d4d4d;
+      --subtext: #727272;
+      --line: #e7e4de;
+      --beige: #f2eee7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Yu Gothic",
+        YuGothic,
+        Meiryo,
+        sans-serif;
+      line-height: 1.9;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+      display: inline-flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-main {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-sub {
+      margin-top: 4px;
+      color: var(--blue-dark);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    .back-link {
+      color: var(--subtext);
+      font-size: 13px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .hero {
+      padding: 74px 20px 66px;
+      text-align: center;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(186, 214, 217, 0.46) 0%,
+          rgba(248, 246, 241, 0) 100%
+        );
+    }
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--blue-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(25px, 4vw, 38px);
+      line-height: 1.45;
+      letter-spacing: 0.05em;
+    }
+
+    main {
+      width: min(860px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 0 0 90px;
+    }
+
+    .legal-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 50px 56px;
+      box-shadow: 0 8px 30px rgba(80, 80, 80, 0.04);
+    }
+
+    .legal-row {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 27px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .legal-row:first-child {
+      padding-top: 0;
+    }
+
+    .legal-row:last-child {
+      border-bottom: 0;
+    }
+
+    .legal-label {
+      font-weight: 700;
+      color: #454545;
+    }
+
+    .legal-content {
+      min-width: 0;
+    }
+
+    .legal-content p {
+      margin: 0 0 12px;
+    }
+
+    .legal-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-content ul {
+      margin: 0;
+      padding-left: 1.5em;
+    }
+
+    .legal-content li {
+      margin-bottom: 7px;
+    }
+
+    strong {
+      color: #3f646b;
+    }
+
+    .placeholder {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #fff3cd;
+      border: 1px solid #eadb9f;
+      border-radius: 6px;
+      font-weight: 700;
+      color: #665b36;
+    }
+
+    .disclosure-box {
+      padding: 20px 22px;
+      background: var(--beige);
+      border-radius: 12px;
+    }
+
+    .terms-link {
+      color: var(--blue-dark);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .established {
+      margin-top: 46px;
+      padding: 28px;
+      background: var(--beige);
+      border-radius: 14px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--subtext);
+    }
+
+    .established strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .bottom-link {
+      margin-top: 38px;
+      text-align: center;
+    }
+
+    .bottom-link a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 26px;
+      border: 1px solid var(--blue-dark);
+      border-radius: 999px;
+      color: var(--blue-dark);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .bottom-link a:hover {
+      background: var(--blue-dark);
+      color: #fff;
+    }
+
+    footer {
+      padding: 36px 20px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+      text-align: center;
+      color: var(--subtext);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 680px) {
+      .header-inner {
+        width: min(100% - 28px, 1100px);
+        min-height: 68px;
+      }
+
+      .brand-main {
+        font-size: 14px;
+      }
+
+      .brand-sub {
+        font-size: 9px;
+      }
+
+      .back-link {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 54px 18px 50px;
+      }
+
+      main {
+        width: min(100% - 24px, 860px);
+        padding-bottom: 60px;
+      }
+
+      .legal-card {
+        padding: 34px 22px;
+        border-radius: 17px;
+      }
+
+      .legal-row {
+        grid-template-columns: 1fr;
+        gap: 9px;
+        padding: 24px 0;
+      }
+
+      .legal-label {
+        padding-left: 12px;
+        border-left: 4px solid var(--blue);
+      }
+
+      body {
+        font-size: 14px;
+        line-height: 1.85;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-main">white rabbit</span>
+        <span class="brand-sub">WEB STUDIO</span>
+      </a>
+
+      <a href="index.html" class="back-link">
+        ← WEB制作ページへ戻る
+      </a>
+
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <p class="eyebrow">LEGAL NOTICE</p>
+
+    <h1>特定商取引法に基づく表記</h1>
+  </section>
+
+
+  <main>
+
+    <article class="legal-card">
+
+      <div class="legal-row">
+        <div class="legal-label">販売事業者</div>
+
+        <div class="legal-content">
+          <p>
+            <span class="placeholder">
+              久保裕稔
+            </span>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">運営責任者</div>
+
+        <div class="legal-content">
+          <p>
+            <span class="placeholder">
+              久保裕稔
+            </span>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">運営サービス名</div>
+
+        <div class="legal-content">
+          <p>spaceHIRO white rabbit</p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">WEB制作サービス名</div>
+
+        <div class="legal-content">
+          <p>white rabbit WEB STUDIO</p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">所在地・電話番号</div>
+
+        <div class="legal-content">
+
+          <div class="disclosure-box">
+            <p>
+              省略している法定の表示事項を記載した電磁的記録は、
+              ご請求に応じて遅滞なく提供いたします。
+            </p>
+
+            <p>
+              所在地・電話番号等の開示をご希望の場合は、
+              下記お問い合わせ先までご連絡ください。
+              お申込みの意思決定に先立ってご確認いただけるよう、
+              遅滞なくご案内いたします。
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">お問い合わせ先</div>
+
+        <div class="legal-content">
+          <p>
+            <span class="placeholder">
+              white.rabbit.web.studio@gmail.com
+            </span>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">サービス料金</div>
+
+        <div class="legal-content">
+          <p>1ページ型WEBサイト制作</p>
+          <p><strong>39,800円（税込）</strong></p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">サービス料金以外に必要となる費用</div>
+
+        <div class="legal-content">
+          <ul>
+            <li>銀行振込をご利用の場合の振込手数料</li>
+            <li>独自ドメインの取得・更新費用</li>
+            <li>お客様が任意で利用する外部サービスの利用料金</li>
+          </ul>
+
+          <p>
+            当方への月額管理費は<strong>0円</strong>です。
+          </p>
+
+          <p>
+            ただし、外部サービスの料金・仕様等が将来変更された場合、
+            WEBサイトの公開・維持に追加費用が必要となることがあります。
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">お支払い方法</div>
+
+        <div class="legal-content">
+          <ul>
+            <li>銀行振込</li>
+            <li>当方指定のクレジットカード決済</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">お支払い時期</div>
+
+        <div class="legal-content">
+          <p>
+            お申込み内容等を当方で確認し、
+            制作をお受けする旨をご案内した後、
+            お支払い方法をご案内します。
+          </p>
+
+          <p>
+            お支払い方法のご案内から
+            <strong>7日以内</strong>に、
+            制作料金全額をお支払いください。
+          </p>
+
+          <p>
+            銀行振込にかかる振込手数料は、
+            お客様のご負担となります。
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">サービスの提供時期</div>
+
+        <div class="legal-content">
+          <p>
+            必要な情報・素材およびご入金の確認後、
+            当方より制作開始のご連絡をいたします。
+          </p>
+
+          <p>
+            制作開始後、
+            <strong>通常7〜14日程度を目安に初稿</strong>
+            をご案内します。
+          </p>
+
+          <p>
+            お客様による素材提出、内容確認、
+            修正内容のご連絡等に要した期間は
+            制作期間に含まれません。
+          </p>
+
+          <p>
+            また、お申込み状況、制作内容、
+            外部サービスの設定・反映状況等により、
+            制作期間が前後する場合があります。
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">修正について</div>
+
+        <div class="legal-content">
+          <p>
+            初稿提出後、
+            <strong>2回までの修正</strong>
+            を基本制作料金に含みます。
+          </p>
+
+          <p>
+            ベースデザインの変更、
+            サイト構成の大幅な変更、
+            掲載内容の全面的な作り直し等は、
+            通常の修正には含まれません。
+          </p>
+
+          <p>
+            3回目以降の修正または基本範囲を超える修正については、
+            内容に応じて追加料金が発生する場合があります。
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">キャンセル・返金について</div>
+
+        <div class="legal-content">
+          <p>
+            お支払い前のキャンセル料はかかりません。
+          </p>
+
+          <p>
+            お支払い後であっても、
+            当方から制作開始のご連絡をする前であれば、
+            原則として制作料金を返金します。
+          </p>
+
+          <p>
+            返金に伴い実際に発生する振込手数料その他の費用は、
+            お客様のご負担となります。
+          </p>
+
+          <p>
+            <strong>
+              制作開始のご連絡後は、
+              お客様都合によるキャンセル・返金は
+              原則としてお受けできません。
+            </strong>
+          </p>
+
+          <p>
+            当方の都合により本サービスを提供できなくなった場合は、
+            原則としてお支払いいただいた制作料金を返金します。
+          </p>
+
+          <p>
+            なお、法令上お客様に認められる権利を
+            制限するものではありません。
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">公開後のサポート・更新</div>
+
+        <div class="legal-content">
+          <p>
+            WEBサイト公開後
+            <strong>7日間</strong>は、
+            誤字・脱字、営業時間、URL・リンクの誤り等の
+            軽微な修正を無料で対応します。
+          </p>
+
+          <p>
+            公開後8日目以降の軽微な更新は、
+            <strong>1回3,300円（税込）</strong>
+            で承ります。
+          </p>
+
+          <p>
+            軽微な更新とは、
+            お客様から完成した文章・画像その他必要な素材をご提供いただき、
+            当方が概ね30分以内で対応可能と判断する内容をいいます。
+          </p>
+
+          <p>
+            新しいページ・セクション・機能の追加、
+            大幅なレイアウト・デザイン変更、
+            文章の新規作成その他軽微な更新を超える作業は、
+            別途お見積りとなります。
+          </p>
+        </div>
+      </div>
+
+
+      <div class="legal-row">
+        <div class="legal-label">その他</div>
+
+        <div class="legal-content">
+          <p>
+            本サービスの詳細な利用条件については、
+            以下の利用規約をご確認ください。
+          </p>
+
+          <p>
+            <a href="terms.html" class="terms-link">
+              WEBサイト制作サービス 利用規約
+            </a>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="established">
+        制定日：2026年8月30日
+
+        <strong>
+          spaceHIRO white rabbit<br>
+          white rabbit WEB STUDIO
+        </strong>
+      </div>
+
+
+      <div class="bottom-link">
+        <a href="index.html">
+          ← WEB制作ページへ戻る
+        </a>
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <footer>
+    © white rabbit WEB STUDIO
+  </footer>
+
+</body>
+</html>
